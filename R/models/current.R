@@ -80,15 +80,18 @@ current_rating_rows <- function(model, teams, ids, estimate, lower, upper, sd, a
 }
 
 run_current_models <- function(format = "Test", iterations = 1000L) {
-  validate_model_context()
+  matches <- read_resolved_model_context()
   prepared <- read_prepared("data/build")$manifest
   as_of <- as.Date(prepared$as_of)
-  matches <- readr::read_csv("data/context/matches.csv", show_col_types = FALSE)
   train <- current_training(matches, format, as_of)
   teams <- current_teams(train, as_of)
   output <- file.path("out/analysis/current", tolower(format))
   replace_model_directory(output, function(output) {
     message("Current ", format, " ratings through ", as_of, ": ", nrow(train), " matches")
+    readr::write_csv(train[train$venue_resolution == "verified_location", c(
+      "match_id", "start_date", "ground_profile_id", "ground_label", "country_original", "country",
+      "home_sign_original", "home_sign", "venue_resolution", "venue_source"
+    )], file.path(output, "venue_audit.csv"), na = "")
     spline <- select_spline(train, as_of + 1L)
     readr::write_csv(spline$tuning, file.path(output, "gam_tuning.csv"))
     glicko <- current_glicko(train, as_of)
@@ -125,12 +128,15 @@ run_current_models <- function(format = "Test", iterations = 1000L) {
     readr::write_csv(data.frame(
       format = format, since = as.Date("2000-01-01"), as_of = as_of,
       rated_matches = nrow(train), teams = nrow(teams), last_result = max(train$end_date),
-      unknown_venues = sum(is.na(train$country))
+      unknown_venues = sum(is.na(train$country)),
+      resolved_venues = sum(train$venue_resolution == "verified_location")
     ), file.path(output, "coverage.csv"))
     sources <- c(
       list.files("R/models", pattern = "\\.R$", full.names = TRUE), "scripts/models.R",
       "models/dynamic_probit.stan", "renv.lock", "R/pipeline.R",
       "data/context/matches.csv", "data/context/manifest.json",
+      "data/context/resolved/matches.csv", "data/context/resolved/manifest.json",
+      "data/reference/ground_jurisdictions.csv",
       "data/build/manifest.json"
     )
     outputs <- list.files(output, pattern = "\\.(csv|json)$", full.names = TRUE)

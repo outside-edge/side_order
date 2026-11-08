@@ -52,3 +52,12 @@ remain available through the repository's
 
 Charts can be downloaded as SVG or PNG from the [Test](test.qmd), [ODI](odi.qmd),
 and [T20I](t20i.qmd) pages. See [methods](methods.qmd) for the rating definitions.
+
+## Other models
+
+[Test](models.qmd) and [ODI](models_odi.qmd) model pages provide GAM, Stan,
+Glicko-2, and TrueSkill downloads on their own scales. ODI venue-country
+resolutions are available in the
+[match-level venue audit](../out/release/models/odi/venue_audit.csv).
+The [venue-resolution procedure](https://github.com/outside-edge/side_order/blob/main/docs/current_models.md#venue-additions)
+preserves original values and records the source for every filled country.

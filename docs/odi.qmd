@@ -5,3 +5,5 @@ params:
 ---
 
 {{< include _ratings.qmd >}}
+
+[Compare GAM, Stan, Glicko-2, and TrueSkill ODI ratings](models_odi.qmd).

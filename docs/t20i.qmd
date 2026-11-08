@@ -5,3 +5,12 @@ params:
 ---
 
 {{< include _ratings.qmd >}}
+
+## Other models and venue coverage
+
+The contextual GAM and Stan models need venue countries that Elo does not use.
+Our upstream ground-country table is an archival snapshot; newer T20I grounds
+often lack the legacy match links needed to recover their countries. Unresolved
+venues remain missing in the data, so contextual T20I ratings are not yet published.
+The [upstream diagnosis and match-level audit](https://github.com/outside-edge/side_order/blob/main/docs/current_models.md#t20i-upstream-diagnosis)
+describe the gaps and the separate venue-resolution step.

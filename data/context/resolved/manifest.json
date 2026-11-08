@@ -1,0 +1,17 @@
+{
+  "inputs": {
+    "data/context/matches.csv": "6dc3e5a12c754e26ae7863c43953ebb89e8b3ba6ce6badf3fae08637a6dd32ce",
+    "data/context/manifest.json": "f63e751d1d16cf6c98b6092bec90dc0f25853e7368fd9a9885924b5a67d08ccc",
+    "data/cricket_matches.csv": "3eb11105d53ac7acd103c77e05a13434900978020a1c0fc483edb139161aab9f",
+    "data/reference/ground_jurisdictions.csv": "69e9e9bb5d470d073c2ad229b6a5dee748a7fbfb52e7feb0eb287179e7680426",
+    "R/models/venues.R": "b47fcdf54757ee31189afe653925e623fd3b2fb59635071a2ba06e6cf102ade7"
+  },
+  "files": {
+    "coverage.csv": "ee1a9eb9a2a86e2ff528795050eadb9ea868619f58ea8cfadb6954ea58e8c849",
+    "matches.csv": "066f02ff06aaac7438c0dac8f1312cd82f2d47d4092d563566f24483d8512594",
+    "venue_audit.csv": "414fd6d511ed5ebfc5532f7d75c20a77754870db2d707e5820aaab6cfd7ff751"
+  },
+  "rows": 11905,
+  "policy": "Preserve all rows; fill only missing countries using dated verified locations",
+  "eligibility": "Completed scored national-team matches starting in 2000 or later; no invitational XIs"
+}

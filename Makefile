@@ -1,5 +1,6 @@
 .PHONY: sync fetch prepare analyze visualize publish update site lint test check ci-docker model-data models check-models current-models visualize-models publish-models
 .PHONY: tune-elo visualize-elo-tuning check-elo-tuning
+.PHONY: resolve-model-venues
 
 QUARTO ?= quarto
 MODEL_FORMAT ?= Test
@@ -20,6 +21,9 @@ check: lint test
 
 model-data:
 	Rscript scripts/models.R prepare
+
+resolve-model-venues:
+	Rscript scripts/models.R resolve-venues
 
 models:
 	Rscript scripts/models.R compare $(MODEL_ARGS)

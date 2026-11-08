@@ -32,7 +32,7 @@ jobs:
       - name: Capture website previews
         run: |
           mkdir -p out/previews
-          for page in index docs/test docs/odi docs/t20i; do
+          for page in index docs/test docs/odi docs/t20i docs/models docs/models_odi; do
             for size in 1440,1800 480,2000; do
               google-chrome --headless --no-sandbox --disable-gpu --hide-scrollbars \
                 --timeout=15000 --window-size="$size" \

@@ -45,9 +45,10 @@ plot_current_models <- function(format = "Test") {
         ) +
         ggplot2::theme_minimal(base_size = 12) +
         ggplot2::theme(panel.grid.minor = ggplot2::element_blank(), plot.caption = ggplot2::element_text(hjust = 0))
-      ggplot2::ggsave(file.path(destination, paste0(model, ".png")), plot, width = 8, height = 5, dpi = 160)
+      height <- max(5, 1.5 + 0.25 * nrow(rows))
+      ggplot2::ggsave(file.path(destination, paste0(model, ".png")), plot, width = 8, height = height, dpi = 160)
       ggplot2::ggsave(file.path(destination, paste0(model, ".svg")), plot,
-        width = 8, height = 5,
+        width = 8, height = height,
         device = grDevices::svg
       )
     }

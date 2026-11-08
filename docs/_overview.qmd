@@ -42,7 +42,7 @@ or venue adjustments.
 
 ## Beyond Elo
 
-See [other Test models](docs/models.qmd) for current Stan, GAM, Glicko-2, and
-TrueSkill ratings, with uncertainty intervals and downloads. Each model uses
+See [other Test models](docs/models.qmd) and [ODI models](docs/models_odi.qmd)
+for current Stan, GAM, Glicko-2, and TrueSkill ratings, with uncertainty intervals and downloads. Each model uses
 its own scale. [Research](docs/research.qmd) presents the separate historical
 forecast evaluation and plans for extending the models.

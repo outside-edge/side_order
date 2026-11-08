@@ -53,16 +53,26 @@ jobs:
             args+=(--refresh)
           fi
           Rscript scripts/pipeline.R "${args[@]}"
-      - name: Fit and publish current Test models
+      - name: Fit and publish current Test and ODI models
         id: current_models
         if: steps.cmdstan.outcome == 'success'
         continue-on-error: true
-        timeout-minutes: 40
+        timeout-minutes: 75
         run: |
           make model-data
-          make current-models
-          make visualize-models
-          make publish-models
+          make resolve-model-venues
+          failed=0
+          for format in Test ODI; do
+            if make current-models MODEL_ARGS="$format" &&
+               make visualize-models MODEL_FORMAT="$format" &&
+               make publish-models MODEL_FORMAT="$format"; then
+              echo "Published $format models"
+            else
+              echo "::warning::Retaining previous $format models after a failed update."
+              failed=1
+            fi
+          done
+          exit "$failed"
       - name: Report retained model ratings
         if: steps.cmdstan.outcome != 'success' || steps.current_models.outcome != 'success'
         run: echo '::warning::Current model update failed. Publishing Elo with the previous model ratings and their original cutoff.'
