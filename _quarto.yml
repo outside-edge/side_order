@@ -12,6 +12,7 @@ project:
     - docs/research.qmd
     - docs/models.qmd
     - docs/models_odi.qmd
+    - docs/models_t20i.qmd
     - docs/correctness.qmd
   resources:
     - out/release/elo/**
@@ -40,6 +41,8 @@ website:
             text: Other models (Tests)
           - href: docs/models_odi.qmd
             text: Other models (ODIs)
+          - href: docs/models_t20i.qmd
+            text: Other models (T20Is)
       - href: docs/methods.qmd
         text: Methods
       - href: docs/data.qmd

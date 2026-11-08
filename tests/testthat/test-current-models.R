@@ -136,3 +136,42 @@ test_that("inner validation dates handle leap-day cutoffs", {
   expect_equal(previous_year(as.Date("2024-02-29")), as.Date("2023-02-28"))
   expect_equal(previous_year(as.Date("2025-03-01")), as.Date("2024-03-01"))
 })
+
+test_that("renamed teams keep one identity and their latest observed label", {
+  train <- simulated_matches(3L)
+  train$team1_id <- c(1L, 2L, 1L)
+  train$team2_id <- c(2L, 1L, 2L)
+  train$team1 <- c("Swaziland", "India", "Eswatini")
+  train$team2 <- c("India", "Swaziland", "India")
+  teams <- current_teams(train[c(3, 1, 2), ], max(train$end_date))
+  expect_equal(teams$team_id, 1:2)
+  expect_equal(teams$team, c("Eswatini", "India"))
+  expect_equal(teams$rated_matches, c(3L, 3L))
+  expect_equal(latest_team_labels(swap_teams(train)), latest_team_labels(train))
+  expect_equal(latest_team_labels(train[1:2, ])$team[1], "Swaziland")
+  expect_equal(normalize_jurisdiction(c("Swaziland", "Eswatini")), rep("Eswatini", 2))
+})
+
+test_that("saved GAM reuse rejects changed training data and settings", {
+  train <- simulated_matches(100L)
+  grid <- draw_grid("Test")
+  spline <- list(fit = fit_spline(train, grid[1]), tuning = data.frame(margin = grid, log_loss = 1:4))
+  path <- tempfile(fileext = ".rds")
+  on.exit(unlink(path))
+  saveRDS(list(gam = spline), path)
+  reused <- read_current_spline(path, train)
+  expect_equal(coef(reused$fit$model), coef(spline$fit$model))
+  changed <- train
+  changed$score[1] <- if (changed$score[1] == 1) 0 else 1
+  expect_error(read_current_spline(path, changed), "training inputs")
+  changed <- train
+  changed$home_sign[1] <- 1 - changed$home_sign[1]
+  expect_error(read_current_spline(path, changed), "training inputs")
+  changed <- train
+  changed$start_date[1] <- changed$start_date[1] + 1L
+  expect_error(read_current_spline(path, changed), "training inputs")
+  expect_error(read_current_spline(path, train[-1, ]), "training inputs")
+  spline$fit$k <- 5L
+  saveRDS(list(gam = spline), path)
+  expect_error(read_current_spline(path, train), "settings")
+})

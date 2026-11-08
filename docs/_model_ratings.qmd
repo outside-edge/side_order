@@ -24,7 +24,8 @@ if (publication$manifest$as_of != elo$manifest$analysis$as_of) {
 The weekly update fits these methods to all eligible completed matches through
 its cutoff. [Historical forecast evaluation](research.qmd) is separate.
 These methods remain experimental; their availability is not evidence that one
-predicts better than the others. [Elo ratings](`r paste0(format_slug, ".qmd")`) use a longer history.
+predicts better than the others. See the [Elo ratings](`r paste0(format_slug, ".qmd")`)
+for this format.
 
 [Download all current ratings](../out/release/models/`r format_slug`/latest.csv) ·
 [Fit metadata](../out/release/models/`r format_slug`/manifest.json) ·
@@ -47,12 +48,20 @@ home advantage and draws using country and ground context. Estimates are posteri
 means with 90% credible intervals. The current quarter's estimate uses completed
 matches through the cutoff, including matches later than the quarter's start.
 
+::: {.ratings-table role="region" aria-label="Stan ratings table" tabindex="0"}
+
 ```{r}
 #| results: asis
 knitr::kable(site_model_ratings(publication, "stan_dynamic_probit"), format = "html", escape = TRUE, row.names = FALSE)
 ```
 
+:::
+
+::: {.chart-scroll role="region" aria-label="Stan rating intervals" tabindex="0"}
+
 ![Stan current strengths and 90% credible intervals.](../out/release/models/`r format_slug`/stan_dynamic_probit.png)
+
+:::
 
 [Sampler diagnostics](../out/release/models/`r format_slug`/stan_diagnostics.json)
 
@@ -62,12 +71,20 @@ Penalized splines estimate smooth team trajectories, with country and ground
 variation in home advantage. Current strengths use the fitted endpoint, with
 approximate 90% intervals that include smoothing uncertainty.
 
+::: {.ratings-table role="region" aria-label="GAM ratings table" tabindex="0"}
+
 ```{r}
 #| results: asis
 knitr::kable(site_model_ratings(publication, "gam"), format = "html", escape = TRUE, row.names = FALSE)
 ```
 
+:::
+
+::: {.chart-scroll role="region" aria-label="GAM rating intervals" tabindex="0"}
+
 ![GAM current strengths and approximate 90% intervals.](../out/release/models/`r format_slug`/gam.png)
+
+:::
 
 ## Glicko-2
 
@@ -76,12 +93,20 @@ The current month is partial. Inactive teams retain their estimates but gain
 uncertainty over empty periods. Displayed intervals are approximate normal 90%
 intervals based on the rating deviation. This model has no venue adjustment.
 
+::: {.ratings-table role="region" aria-label="Glicko-2 ratings table" tabindex="0"}
+
 ```{r}
 #| results: asis
 knitr::kable(site_model_ratings(publication, "glicko2"), format = "html", escape = TRUE, row.names = FALSE)
 ```
 
+:::
+
+::: {.chart-scroll role="region" aria-label="Glicko-2 rating intervals" tabindex="0"}
+
 ![Glicko-2 current ratings and approximate 90% intervals.](../out/release/models/`r format_slug`/glicko2.png)
+
+:::
 
 ## TrueSkill
 
@@ -91,12 +116,20 @@ smoothing step. Calendar days govern uncertainty growth; draws and ties share a
 draw outcome. Displayed intervals are approximate Gaussian 90% intervals. This
 is a team model without venue effects, distinct from the contextual Stan model.
 
+::: {.ratings-table role="region" aria-label="TrueSkill ratings table" tabindex="0"}
+
 ```{r}
 #| results: asis
 knitr::kable(site_model_ratings(publication, "trueskill"), format = "html", escape = TRUE, row.names = FALSE)
 ```
 
+:::
+
+::: {.chart-scroll role="region" aria-label="TrueSkill rating intervals" tabindex="0"}
+
 ![TrueSkill current strengths and approximate 90% intervals.](../out/release/models/`r format_slug`/trueskill.png)
+
+:::
 
 ## Reading the tables
 

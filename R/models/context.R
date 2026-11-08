@@ -2,7 +2,8 @@ normalize_jurisdiction <- function(x) {
   x <- trimws(x)
   aliases <- c(
     "U.A.E." = "United Arab Emirates", "U.S.A." = "United States of America",
-    "P.N.G." = "Papua New Guinea", "Cayman" = "Cayman Islands", "Czech Rep." = "Czech Republic"
+    "P.N.G." = "Papua New Guinea", "Cayman" = "Cayman Islands", "Czech Rep." = "Czech Republic",
+    "Swaziland" = "Eswatini"
   )
   replace <- match(x, names(aliases))
   x[!is.na(replace)] <- unname(aliases[replace[!is.na(replace)]])

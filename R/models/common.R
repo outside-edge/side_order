@@ -1,3 +1,16 @@
+latest_team_labels <- function(matches) {
+  matches <- matches[order(matches$end_date, matches$start_date, matches$match_id), ]
+  appearances <- rbind(
+    data.frame(team_id = matches$team1_id, team = matches$team1, sequence = seq_len(nrow(matches))),
+    data.frame(team_id = matches$team2_id, team = matches$team2, sequence = seq_len(nrow(matches)))
+  )
+  appearances <- appearances[order(appearances$sequence), ]
+  teams <- appearances[!duplicated(appearances$team_id, fromLast = TRUE), c("team_id", "team")]
+  teams <- teams[order(teams$team_id), ]
+  rownames(teams) <- NULL
+  teams
+}
+
 outcome_category <- function(score) {
   if (any(!is.na(score) & !score %in% c(0, 0.5, 1))) stop("Invalid match score")
   match(score, c(0, 0.5, 1))

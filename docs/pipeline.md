@@ -2,7 +2,7 @@
 
 For current GAM, Stan, Glicko-2, and TrueSkill ratings, see
 [current model publication](current_models.md). The weekly workflow updates
-those Test and ODI ratings alongside Elo; historical model evaluation remains separate.
+those Test, ODI, and T20I ratings alongside Elo; historical model evaluation remains separate.
 
 The R pipeline acquires match results, prepares data, fits ratings, renders figures,
 and assembles publications. Each stage can run independently from saved inputs.

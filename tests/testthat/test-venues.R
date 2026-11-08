@@ -78,3 +78,41 @@ test_that("all current formats retain their requested sample after verified venu
     expect_false(anyNA(train$country))
   }
 })
+
+test_that("ground bridge snapshots require a pinned source and intact content", {
+  directory <- tempfile()
+  dir.create(directory)
+  on.exit(unlink(directory, recursive = TRUE))
+  mapping <- venue_mapping()
+  path <- file.path(directory, "grounds.csv")
+  readr::write_csv(mapping, path)
+  ref <- paste(rep("a", 40), collapse = "")
+  manifest <- list(source = ground_bridge_url(ref), source_commit = ref, sha256 = sha256(path))
+  write_json(manifest, file.path(directory, "manifest.json"))
+  expect_equal(as.data.frame(read_ground_bridge(directory)), mapping)
+  expect_error(ground_bridge_url("main"), "full commit SHA")
+  expect_error(ground_bridge_url(character()), "full commit SHA")
+  manifest$source <- "https://example.org/grounds.csv"
+  write_json(manifest, file.path(directory, "manifest.json"))
+  expect_error(read_ground_bridge(directory), "source or checksum")
+  manifest$source <- ground_bridge_url(ref)
+  write_json(manifest, file.path(directory, "manifest.json"))
+  mapping$country <- "Australia"
+  readr::write_csv(mapping, path)
+  expect_error(read_ground_bridge(directory), "source or checksum")
+})
+
+test_that("all supported bridge methods preserve their provenance", {
+  matches <- venue_matches(simulated_matches(4L))
+  for (method in c("legacy_match_link", "audited_jurisdiction", "verified_location")) {
+    mapping <- venue_mapping()
+    mapping$method <- method
+    result <- resolve_ground_jurisdictions(matches, mapping)
+    expect_equal(result$country[1:2], c("India", "India"))
+    expect_equal(result$venue_resolution[1:2], rep(method, 2))
+    expect_equal(result$venue_source[1:2], rep(mapping$source, 2))
+  }
+  mapping <- venue_mapping()
+  mapping$ground_profile_id <- 0L
+  expect_error(validate_ground_mapping(mapping), "Invalid ground profile")
+})

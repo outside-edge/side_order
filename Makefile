@@ -1,6 +1,6 @@
 .PHONY: sync fetch prepare analyze visualize publish update site lint test check ci-docker model-data models check-models current-models visualize-models publish-models
 .PHONY: tune-elo visualize-elo-tuning check-elo-tuning
-.PHONY: resolve-model-venues
+.PHONY: fetch-model-venues resolve-model-venues
 
 QUARTO ?= quarto
 MODEL_FORMAT ?= Test
@@ -24,6 +24,9 @@ model-data:
 
 resolve-model-venues:
 	Rscript scripts/models.R resolve-venues
+
+fetch-model-venues:
+	Rscript scripts/models.R fetch-venues $(GROUNDS_REF)
 
 models:
 	Rscript scripts/models.R compare $(MODEL_ARGS)

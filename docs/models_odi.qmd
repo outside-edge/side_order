@@ -4,6 +4,6 @@ params:
   format: ODI
 ---
 
-[Test models](models.qmd)
+[Test models](models.qmd) · [T20I models](models_t20i.qmd)
 
 {{< include _model_ratings.qmd >}}

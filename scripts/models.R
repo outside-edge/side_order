@@ -7,7 +7,7 @@ for (module in list.files("R/models", pattern = "\\.R$", full.names = TRUE)) sou
 args <- commandArgs(trailingOnly = TRUE)
 if (!length(args)) {
   stop(
-    "Usage: models.R prepare | resolve-venues | current [format] [iterations]",
+    "Usage: models.R prepare | fetch-venues <commit> | resolve-venues | current [format] [iterations] [saved-fit-rds]",
     " | compare [format] [origin] [until] [iterations]",
     " | visualize <output-dir> | visualize-current [format] | publish-current [format]",
     " | tune-elo [format] | visualize-elo-tuning [format] | check-elo-tuning [format]"
@@ -27,12 +27,15 @@ if (args[1] %in% c("tune-elo", "visualize-elo-tuning", "check-elo-tuning")) {
   }
 } else if (args[1] == "prepare") {
   prepare_model_context()
+} else if (args[1] == "fetch-venues" && length(args) == 2L) {
+  fetch_model_venues(args[2])
 } else if (args[1] == "resolve-venues" && length(args) == 1L) {
   prepare_model_venues()
-} else if (args[1] == "current") {
+} else if (args[1] == "current" && length(args) <= 4L) {
   format <- if (length(args) >= 2L) args[2] else "Test"
   iterations <- if (length(args) >= 3L) as.integer(args[3]) else 1000L
-  run_current_models(format, iterations)
+  gam_fit <- if (length(args) == 4L) args[4] else NULL
+  run_current_models(format, iterations, gam_fit)
 } else if (args[1] == "publish-current") {
   publish_current_models(if (length(args) >= 2L) args[2] else "Test")
 } else if (args[1] == "visualize-current") {

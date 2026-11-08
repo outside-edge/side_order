@@ -14,11 +14,7 @@ current_training <- function(matches, format, as_of, since = as.Date("2000-01-01
 }
 
 current_teams <- function(train, as_of) {
-  teams <- unique(rbind(
-    data.frame(team_id = train$team1_id, team = train$team1),
-    data.frame(team_id = train$team2_id, team = train$team2)
-  ))
-  if (anyDuplicated(teams$team_id)) stop("Ambiguous team names in rating sample")
+  teams <- latest_team_labels(train)
   ids <- c(train$team1_id, train$team2_id)
   teams$rated_matches <- as.integer(table(ids)[as.character(teams$team_id)])
   last <- tapply(as.numeric(c(train$end_date, train$end_date)), ids, max)
@@ -79,20 +75,50 @@ current_rating_rows <- function(model, teams, ids, estimate, lower, upper, sd, a
   rows[order(!rows$is_active, -rows$estimate, rows$team_id), ]
 }
 
-run_current_models <- function(format = "Test", iterations = 1000L) {
+read_current_spline <- function(path, train) {
+  spline <- readRDS(path)$gam
+  grid <- draw_grid(unique(train$format))
+  if (!inherits(spline$fit$model, "gam") || !isTRUE(spline$fit$model$converged) ||
+        !identical(spline$fit$model$outer.info$conv, "full convergence") ||
+        !identical(spline$fit$k, 6L) || !identical(spline$tuning$margin, grid) ||
+        any(!is.finite(spline$tuning$log_loss)) ||
+        spline$fit$margin != grid[which.min(spline$tuning$log_loss)]) {
+    stop("Saved GAM settings or convergence do not match current models")
+  }
+  inputs <- gam_inputs(train, spline$fit$levels, spline$fit$margin)
+  names(inputs)[names(inputs) == "shift"] <- "offset(shift)"
+  columns <- c("y", "home", "offset(shift)", "time", "team", "signs")
+  if (length(spline$fit$levels$country) > 1L) columns <- c(columns, "country", "country_home")
+  if (length(spline$fit$levels$ground) > 1L) columns <- c(columns, "ground", "ground_home")
+  observed <- spline$fit$model$model
+  if (!setequal(names(observed), columns) ||
+        !identical(as.list(observed[columns]), inputs[columns]) ||
+        spline$fit$last_date != max(train$start_date)) {
+    stop("Saved GAM training inputs do not match the current sample")
+  }
+  spline
+}
+
+run_current_models <- function(format = "Test", iterations = 1000L, gam_fit = NULL) {
   matches <- read_resolved_model_context()
   prepared <- read_prepared("data/build")$manifest
   as_of <- as.Date(prepared$as_of)
   train <- current_training(matches, format, as_of)
   teams <- current_teams(train, as_of)
+  reused_spline <- if (!is.null(gam_fit)) read_current_spline(gam_fit, train) else NULL
   output <- file.path("out/analysis/current", tolower(format))
   replace_model_directory(output, function(output) {
     message("Current ", format, " ratings through ", as_of, ": ", nrow(train), " matches")
-    readr::write_csv(train[train$venue_resolution == "verified_location", c(
+    readr::write_csv(train[!is.na(train$venue_source), c(
       "match_id", "start_date", "ground_profile_id", "ground_label", "country_original", "country",
       "home_sign_original", "home_sign", "venue_resolution", "venue_source"
     )], file.path(output, "venue_audit.csv"), na = "")
-    spline <- select_spline(train, as_of + 1L)
+    if (is.null(reused_spline)) {
+      spline <- select_spline(train, as_of + 1L)
+    } else {
+      message("Reusing saved GAM after verifying every training input: ", gam_fit)
+      spline <- reused_spline
+    }
     readr::write_csv(spline$tuning, file.path(output, "gam_tuning.csv"))
     glicko <- current_glicko(train, as_of)
     trueskill <- current_trueskill(train, as_of)
@@ -129,15 +155,15 @@ run_current_models <- function(format = "Test", iterations = 1000L) {
       format = format, since = as.Date("2000-01-01"), as_of = as_of,
       rated_matches = nrow(train), teams = nrow(teams), last_result = max(train$end_date),
       unknown_venues = sum(is.na(train$country)),
-      resolved_venues = sum(train$venue_resolution == "verified_location")
+      resolved_venues = sum(!is.na(train$venue_source))
     ), file.path(output, "coverage.csv"))
     sources <- c(
       list.files("R/models", pattern = "\\.R$", full.names = TRUE), "scripts/models.R",
       "models/dynamic_probit.stan", "renv.lock", "R/pipeline.R",
       "data/context/matches.csv", "data/context/manifest.json",
       "data/context/resolved/matches.csv", "data/context/resolved/manifest.json",
-      "data/reference/ground_jurisdictions.csv",
-      "data/build/manifest.json"
+      "data/raw/context/ground_bridge/grounds.csv", "data/raw/context/ground_bridge/manifest.json",
+      "data/build/manifest.json", gam_fit
     )
     outputs <- list.files(output, pattern = "\\.(csv|json)$", full.names = TRUE)
     jsonlite::write_json(list(
@@ -145,6 +171,7 @@ run_current_models <- function(format = "Test", iterations = 1000L) {
       hashes = setNames(lapply(sources, digest::digest, algo = "sha256", file = TRUE), sources),
       outputs = setNames(lapply(outputs, digest::digest, algo = "sha256", file = TRUE), basename(outputs)),
       stan_diagnostics_passed = stan$diagnostics_passed, chains = 4, iterations_per_chain = iterations,
+      gam_fit_reused_from = gam_fit,
       seed = 20261025L, cmdstan_version = as.character(cmdstanr::cmdstan_version()),
       packages = lapply(c("mgcv", "PlayerRatings", "TrueSkillThroughTime", "cmdstanr"), function(name) {
         list(package = name, version = as.character(utils::packageVersion(name)))

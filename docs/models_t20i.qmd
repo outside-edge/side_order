@@ -1,0 +1,9 @@
+---
+title: T20I ratings by model
+params:
+  format: T20I
+---
+
+[Test models](models.qmd) · [ODI models](models_odi.qmd)
+
+{{< include _model_ratings.qmd >}}

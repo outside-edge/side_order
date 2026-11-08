@@ -8,17 +8,19 @@ read_context_matches <- function(path) {
   ))
 }
 
-resolve_ground_jurisdictions <- function(matches, mapping) {
+validate_ground_mapping <- function(mapping) {
   required <- c("ground_profile_id", "ground_label", "country", "valid_from", "valid_until", "source", "method")
   if (!all(required %in% names(mapping)) || anyNA(mapping[required])) stop("Incomplete venue mapping")
-  if (anyDuplicated(matches$match_id)) stop("Venue resolution requires unique match IDs")
+  if (any(mapping$ground_profile_id <= 0) || any(!nzchar(trimws(mapping$ground_label)))) {
+    stop("Invalid ground profile ID or label")
+  }
   if (
     !inherits(mapping$valid_from, "Date") || !inherits(mapping$valid_until, "Date") ||
       any(mapping$valid_until <= mapping$valid_from)
   ) stop("Invalid venue validity dates")
   if (
     any(!nzchar(trimws(mapping$country))) || any(!grepl("^https://", mapping$source)) ||
-      any(mapping$method != "verified_location")
+      any(!mapping$method %in% c("verified_location", "legacy_match_link", "audited_jurisdiction"))
   ) stop("Invalid venue mapping evidence")
   for (id in unique(mapping$ground_profile_id)) {
     periods <- mapping[mapping$ground_profile_id == id, ]
@@ -27,6 +29,48 @@ resolve_ground_jurisdictions <- function(matches, mapping) {
       stop("Overlapping venue mapping periods")
     }
   }
+  invisible(mapping)
+}
+
+ground_bridge_url <- function(ref) {
+  if (length(ref) != 1L || is.na(ref) || !grepl("^[a-f0-9]{40}$", ref)) {
+    stop("Ground bridge requires a full commit SHA")
+  }
+  paste0("https://raw.githubusercontent.com/outside-edge/cricket_grounds/", ref, "/grounds.csv")
+}
+
+read_ground_mapping <- function(path) {
+  mapping <- readr::read_csv(path, col_types = readr::cols(
+    ground_profile_id = readr::col_integer(), valid_from = readr::col_date(),
+    valid_until = readr::col_date(), .default = readr::col_character()
+  ))
+  validate_ground_mapping(mapping)
+  mapping
+}
+
+fetch_model_venues <- function(ref) {
+  url <- ground_bridge_url(ref)
+  replace_directory("data/raw/context/ground_bridge", function(output) {
+    path <- file.path(output, "grounds.csv")
+    utils::download.file(url, path, method = "libcurl", mode = "wb", quiet = TRUE)
+    read_ground_mapping(path)
+    write_json(list(source = url, source_commit = ref, sha256 = sha256(path)),
+      file.path(output, "manifest.json")
+    )
+  })
+}
+
+read_ground_bridge <- function(directory = "data/raw/context/ground_bridge") {
+  manifest <- jsonlite::read_json(file.path(directory, "manifest.json"))
+  path <- file.path(directory, "grounds.csv")
+  if (!identical(manifest$source, ground_bridge_url(manifest$source_commit)) ||
+        !identical(manifest$sha256, sha256(path))) stop("Ground bridge source or checksum mismatch")
+  read_ground_mapping(path)
+}
+
+resolve_ground_jurisdictions <- function(matches, mapping) {
+  validate_ground_mapping(mapping)
+  if (anyDuplicated(matches$match_id)) stop("Venue resolution requires unique match IDs")
   result <- matches
   result$country_original <- matches$country
   result$home_sign_original <- matches$home_sign
@@ -45,7 +89,7 @@ resolve_ground_jurisdictions <- function(matches, mapping) {
     result$country[rows] <- country
     result$venue_resolution[rows] <- mapping$method[i]
     result$venue_source[rows] <- mapping$source[i]
-    result$context_source[rows] <- "verified location via ground profile ID"
+    result$context_source[rows] <- paste("ground bridge:", mapping$method[i])
   }
   result$home_sign <- as.integer(normalize_jurisdiction(result$team1) == result$country) -
     as.integer(normalize_jurisdiction(result$team2) == result$country)
@@ -56,10 +100,7 @@ resolve_ground_jurisdictions <- function(matches, mapping) {
 prepare_model_venues <- function() {
   validate_model_context()
   matches <- read_context_matches("data/context/matches.csv")
-  mapping <- readr::read_csv("data/reference/ground_jurisdictions.csv", col_types = readr::cols(
-    ground_profile_id = readr::col_integer(), valid_from = readr::col_date(),
-    valid_until = readr::col_date(), .default = readr::col_character()
-  ))
+  mapping <- read_ground_bridge()
   result <- resolve_ground_jurisdictions(matches, mapping)
   invitational <- c("ICC World XI", "World-XI", "Asia XI", "Africa XI")
   eligible <- result$start_date >= as.Date("2000-01-01") & !is.na(result$score) &
@@ -67,7 +108,7 @@ prepare_model_venues <- function() {
   sample <- result[eligible, ]
   coverage <- aggregate(cbind(
     eligible_matches = rep(1L, nrow(sample)), originally_known = as.integer(!is.na(sample$country_original)),
-    resolved = as.integer(sample$venue_resolution == "verified_location"),
+    resolved = as.integer(!is.na(sample$venue_source)),
     unresolved = as.integer(is.na(sample$country))
   ), list(format = sample$format), sum)
   legacy <- readr::read_csv("data/cricket_matches.csv", col_types = readr::cols(.default = readr::col_character()))
@@ -84,13 +125,13 @@ prepare_model_venues <- function() {
     )], file.path(output, "venue_audit.csv"), na = "")
     inputs <- c(
       "data/context/matches.csv", "data/context/manifest.json", "data/cricket_matches.csv",
-      "data/reference/ground_jurisdictions.csv", "R/models/venues.R"
+      "data/raw/context/ground_bridge/grounds.csv", "data/raw/context/ground_bridge/manifest.json", "R/models/venues.R"
     )
     files <- list.files(output, full.names = TRUE)
     write_json(list(
       inputs = as.list(setNames(vapply(inputs, sha256, character(1)), inputs)),
       files = as.list(setNames(vapply(files, sha256, character(1)), basename(files))),
-      rows = nrow(result), policy = "Preserve all rows; fill only missing countries using dated verified locations",
+      rows = nrow(result), policy = "Preserve all rows; fill only missing countries using a pinned dated ground bridge",
       eligibility = "Completed scored national-team matches starting in 2000 or later; no invitational XIs"
     ), file.path(output, "manifest.json"))
   })

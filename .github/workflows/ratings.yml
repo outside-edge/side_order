@@ -21,7 +21,7 @@ jobs:
   update:
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
-    timeout-minutes: 120
+    timeout-minutes: 360
     permissions:
       contents: write
     outputs:
@@ -53,17 +53,19 @@ jobs:
             args+=(--refresh)
           fi
           Rscript scripts/pipeline.R "${args[@]}"
-      - name: Fit and publish current Test and ODI models
+      - name: Fit and publish current Test, ODI, and T20I models
         id: current_models
         if: steps.cmdstan.outcome == 'success'
         continue-on-error: true
-        timeout-minutes: 75
+        timeout-minutes: 300
         run: |
           make model-data
           make resolve-model-venues
           failed=0
-          for format in Test ODI; do
-            if make current-models MODEL_ARGS="$format" &&
+          for format in Test ODI T20I; do
+            iterations=1000
+            if [[ "$format" == "T20I" ]]; then iterations=2000; fi
+            if make current-models MODEL_ARGS="$format $iterations" &&
                make visualize-models MODEL_FORMAT="$format" &&
                make publish-models MODEL_FORMAT="$format"; then
               echo "Published $format models"

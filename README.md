@@ -2,12 +2,13 @@
 
 Independent ratings of men's international cricket teams. Elo ratings for Tests,
 ODIs, and T20Is are updated weekly, with monthly histories available to download.
-Current Test and ODI ratings are also available from GAM, Stan, Glicko-2, and TrueSkill.
+Current Test, ODI, and T20I ratings are also available from GAM, Stan, Glicko-2, and TrueSkill.
 These experimental methods have separate scales, uncertainty estimates, and outputs.
 
 [Ratings website](https://outside-edge.github.io/side_order/) ·
 [Other Test models](https://outside-edge.github.io/side_order/docs/models.html) ·
 [Other ODI models](https://outside-edge.github.io/side_order/docs/models_odi.html) ·
+[Other T20I models](https://outside-edge.github.io/side_order/docs/models_t20i.html) ·
 [Latest Elo ratings](out/release/elo/latest.csv) ·
 [Monthly history](out/release/elo/monthly.csv) ·
 [Match data](data/build/matches.csv)

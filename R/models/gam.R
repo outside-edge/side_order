@@ -53,9 +53,11 @@ select_spline <- function(train, origin, k = 6L) {
   if (nrow(earlier) < 50 || !nrow(validation)) stop("Insufficient inner validation data")
   grid <- draw_grid(unique(train$format))
   scores <- vapply(grid, function(margin) {
+    message("GAM validation: margin = ", margin, ", matches = ", nrow(earlier))
     fit <- fit_spline(earlier, margin, k)
     probability_metrics(predict_spline(fit, validation), validation$score)$log_loss
   }, numeric(1))
   selected <- grid[which.min(scores)]
+  message("GAM full fit: margin = ", selected, ", matches = ", nrow(train))
   list(fit = fit_spline(train, selected, k), tuning = data.frame(margin = grid, log_loss = scores))
 }

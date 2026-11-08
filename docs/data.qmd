@@ -55,9 +55,13 @@ and [T20I](t20i.qmd) pages. See [methods](methods.qmd) for the rating definition
 
 ## Other models
 
-[Test](models.qmd) and [ODI](models_odi.qmd) model pages provide GAM, Stan,
-Glicko-2, and TrueSkill downloads on their own scales. ODI venue-country
-resolutions are available in the
-[match-level venue audit](../out/release/models/odi/venue_audit.csv).
+[Test](models.qmd), [ODI](models_odi.qmd), and [T20I](models_t20i.qmd) model pages
+provide GAM, Stan, Glicko-2, and TrueSkill downloads on their own scales.
+Venue-country resolutions are available in the match-level audits for
+[ODIs](../out/release/models/odi/venue_audit.csv) and
+[T20Is](../out/release/models/t20i/venue_audit.csv).
+The reusable [grounds dataset](https://github.com/outside-edge/cricket_grounds)
+contains profile IDs, dated country mappings, and evidence URLs; its CSV can be
+used independently of this ranking pipeline.
 The [venue-resolution procedure](https://github.com/outside-edge/side_order/blob/main/docs/current_models.md#venue-additions)
 preserves original values and records the source for every filled country.

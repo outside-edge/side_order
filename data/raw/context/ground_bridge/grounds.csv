@@ -1,0 +1,358 @@
+ground_profile_id,ground_label,country,valid_from,valid_until,source,method,reference_match_id,reference_ground
+56285,Buenos Aires,Argentina,2023-02-22,9999-12-31,https://images.icc-cricket.com/image/upload/prd/webeladxgaykq4opb6yi.pdf,verified_location,1359787,
+56289,Buenos Aires,Argentina,2023-02-25,9999-12-31,https://images.icc-cricket.com/image/upload/prd/webeladxgaykq4opb6yi.pdf,verified_location,1359794,
+56293,Adelaide,Australia,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,62412,Adelaide Oval
+56319,Albury,Australia,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,65152,"Lavington Sports Oval, Albury"
+56322,Ballarat,Australia,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,65140,"Eastern Oval, Ballarat"
+56326,Berri,Australia,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,65146,Berri Oval
+56336,Brisbane,Australia,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,62598,"Brisbane Cricket Ground, Woolloongabba, Brisbane"
+56338,Brisbane,Australia,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,62562,"Exhibition Ground, Brisbane"
+56362,Cairns,Australia,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,64037,"Bundaberg Rum Stadium, Cairns"
+56370,Canberra,Australia,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,65142,"Manuka Oval, Canberra"
+56383,Carrara,Australia,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,1144989,Carrara Oval
+56390,Darwin,Australia,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,64036,"Marrara Cricket Ground, Darwin"
+56397,Devonport,Australia,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,65418,Devonport Oval
+56402,Geelong,Australia,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,1001351,"Simonds Stadium, South Geelong, Victoria"
+56407,Hobart,Australia,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,65428,"Bellerive Oval, Hobart"
+56410,Hobart,Australia,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,65375,"Tasmania Cricket Association Ground, Hobart"
+56420,Launceston,Australia,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,65405,"North Tasmania Cricket Association Ground, Launceston"
+56430,Mackay,Australia,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,65126,"Ray Mitchell Oval, Harrup Park, Mackay"
+56441,Melbourne,Australia,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,62413,Melbourne Cricket Ground
+56450,Melbourne (Docklands),Australia,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,64665,"Docklands Stadium, Melbourne"
+56490,W.A.C.A,Australia,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,63061,"Western Australia Cricket Association Ground, Perth"
+56544,Sydney,Australia,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,62408,Sydney Cricket Ground
+56576,Sydney,Australia,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,518954,"Stadium Australia, Sydney"
+56656,Chattogram,Bangladesh,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,65675,Chittagong Stadium
+56658,Chattogram,Bangladesh,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,238170,Chittagong Divisional Stadium
+56661,Dhaka,Pakistan,1947-08-14,1971-03-26,https://beautifulbangladesh.gov.bd/event/40,audited_jurisdiction,62782,Dacca Stadium
+56661,Dhaka,Bangladesh,1971-12-16,9999-12-31,https://afd.gov.bd/media/important-occations/victory-day,audited_jurisdiction,65674,"National Stadium, Dhaka"
+56667,Fatullah,Bangladesh,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,239904,"Narayanganj Osmani Stadium, Fatullah"
+56670,Bogra,Bangladesh,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,237574,"Shaheed Chandu Stadium, Bogra"
+56689,Sylhet,Bangladesh,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,682901,Sylhet Stadium
+56691,Khulna,Bangladesh,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,239903,Khulna Divisional Stadium
+56693,Hamilton,Bermuda,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,1197398,"National Stadium, Hamilton"
+56708,Toronto,Canada,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,66030,"Toronto Cricket, Skating and Curling Club"
+56717,King City (NW),Canada,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,325568,"Maple Leaf North-West Ground, King City"
+56718,King City (NE),Canada,2025-06-11,9999-12-31,https://www.canadacricket.com/?p=1437,verified_location,1489583,
+56788,Birmingham,England,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,62465,"Edgbaston, Birmingham"
+56825,Hove,England,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,65194,"New County Ground, Hove, Brighton"
+56831,Bristol,England,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,65073,"Phoenix County Ground, Bristol"
+56869,Canterbury,England,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,65199,"St Lawrence Ground, Canterbury"
+56874,Cardiff,England,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,65202,"Sophia Gardens, Cardiff"
+56887,Chelmsford,England,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,65086,"County Ground, Chelmsford"
+56901,Chester-le-Street,England,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,65203,"Riverside Ground, Chester-le-Street"
+56953,Derby,England,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,65081,"County Ground, Derby"
+57092,Leeds,England,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,62457,"Headingley, Leeds"
+57100,Leicester,England,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,65071,"Grace Road, Leicester"
+57127,The Oval,England,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,62411,"Kennington Oval, London"
+57129,Lord's,England,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,62410,"Lord's, London"
+57160,Manchester,England,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,62409,"Old Trafford, Manchester"
+57207,Northampton,England,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,65201,"County Ground, Northampton"
+57219,Nottingham,England,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,62455,"Trent Bridge, Nottingham"
+57290,Scarborough,England,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,64955,"North Marine Road Ground, Scarborough"
+57296,Sheffield,England,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,62467,"Bramall Lane, Sheffield"
+57309,Southampton,England,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,65079,"County Ground, Southampton"
+57312,Southampton,England,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,66301,"The Rose Bowl, Southampton"
+57347,Swansea,England,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,64947,"St Helen's, Swansea"
+57351,Taunton,England,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,65068,"County Ground, Taunton"
+57367,Tunbridge Wells,England,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,65083,"Nevill Ground, Tunbridge Wells"
+57424,Worcester,England,1983-06-13,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,verified_location,65075,
+57742,St Saviour,Jersey,2025-06-06,9999-12-31,https://www.gov.je/Government/PlanningPerformance/Pages/MinisterialDecisions.aspx?docid=7BC09A90-D1AD-4E97-B32B-3909C7C373F5,verified_location,1487813,
+57851,Ahmedabad,India,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,63352,"Gujarat Stadium, Motera, Ahmedabad"
+57852,Ahmedabad,India,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,64180,"Sardar Vallabhbhai Patel Stadium, Ahmedabad"
+57871,Amritsar,India,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,64191,"Gandhi Sports Complex Ground, Amritsar"
+57897,Bengaluru,India,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,63131,"Karnataka State Cricket Association Stadium, Bangalore"
+57980,Eden Gardens,India,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,62617,"Eden Gardens, Calcutta"
+57991,Mohali,India,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,65970,"Punjab Cricket Association Stadium, Mohali, Chandigarh"
+57993,Chandigarh,India,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,64253,"Sector 16 Stadium, Chandigarh"
+58008,Chennai,India,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,62618,"Madras Cricket Club Ground, Chepauk, Madras"
+58009,Chennai,India,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,62806,"Corporation Stadium, Madras"
+58027,Cuttack,India,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,64182,"Barabati Stadium, Cuttack"
+58040,Delhi,India,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,62690,"Feroz Shah Kotla, Delhi"
+58044,New Delhi,India,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,64234,"Jawaharlal Nehru Stadium, New Delhi"
+58056,Dharamsala,India,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,565816,"Himachal Pradesh Cricket Association Stadium, Dharamsala"
+58081,Faridabad,India,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,64318,"Nahar Singh Stadium, Faridabad"
+58114,Guwahati,India,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,64221,"Nehru Stadium, Gauhati"
+58119,Gwalior,India,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,64319,"Captain Roop Singh Stadium, Gwalior"
+58136,Hyderabad (Deccan),India,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,62802,"Fateh Maidan, Hyderabad, Deccan"
+58142,Hyderabad,India,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,225959,"Rajiv Gandhi International Stadium, Uppal, Hyderabad"
+58150,Indore,India,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,238194,"Maharani Usharaje Trust Cricket Ground, Indore"
+58151,Indore,India,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,64219,"Nehru Stadium, Indore"
+58162,Jaipur,India,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,64216,"Sawai Mansingh Stadium, Jaipur"
+58164,Jalandhar,India,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,64181,"Burlton Park, Jullundur"
+58180,Jamshedpur,India,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,64220,"Keenan Stadium, Jamshedpur"
+58187,Jodhpur,India,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,64682,"Barkatullah Khan Stadium, Jodhpur"
+58204,Kanpur,India,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,62728,"Green Park, Kanpur"
+58230,Kochi,India,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,66137,"Nehru Stadium, Kochi"
+58273,Lucknow,India,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,65928,"KD Singh Babu Stadium, Lucknow"
+58279,Lucknow,India,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,62742,"University Ground, Lucknow"
+58301,Margao,India,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,65925,"Nehru Stadium, Fatorda, Margao"
+58317,Brabourne,India,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,62691,"Brabourne Stadium, Bombay"
+58319,Mumbai,India,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,62616,"Gymkhana Ground, Bombay"
+58324,Wankhede,India,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,63135,"Wankhede Stadium, Bombay"
+58344,Nagpur,India,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,63046,"Vidarbha Cricket Association Ground, Nagpur"
+58373,Patna,India,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,65965,"Moin-ul-Haq Stadium, Patna"
+58383,Pune,India,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,64246,"Nehru Stadium, Pune"
+58401,Rajkot,India,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,64290,"Municipal Stadium, Rajkot"
+58456,Srinagar,India,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,64217,"Sher-i-Kashmir Stadium, Srinagar"
+58479,Thiruvananthapuram,India,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,64235,"University Stadium, Trivandrum"
+58516,Vadodara,India,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,65999,"Indian Petrochemicals Corporation Limited Sports Complex Ground, Baroda"
+58519,Vadodara,India,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,64218,"Moti Bagh Stadium, Baroda"
+58537,Vijayawada,India,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,64792,"Indira Gandhi Stadium, Vijayawada"
+58542,Visakhapatnam,India,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,64332,"Indira Priyadarshini Stadium, Visakhapatnam"
+58547,Visakhapatnam,India,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,64939,"Andhra Cricket Association-Visakhapatnam District Cricket Association Stadium, Visakhapatnam"
+58588,Belfast,Ireland,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,225171,"Civil Service Cricket Club, Stormont, Belfast"
+58604,Dublin,Ireland,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,65204,"Clontarf Cricket Club Ground, Dublin"
+58607,Dublin (Malahide),Ireland,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,566940,"The Village, Malahide, Dublin"
+58650,Bready,Ireland,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,876463,"Bready Cricket Club, Magheramason, Bready"
+58652,Mombasa,Kenya,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,258006,Mombasa Sports Club Ground
+58655,Nairobi (Aga),Kenya,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,66055,"Aga Khan Sports Club Ground, Nairobi"
+58657,Nairobi (Club),Kenya,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,66054,Nairobi Club Ground
+58658,Nairobi (Ruaraka),Kenya,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,267378,"Ruaraka Sports Club Ground, Nairobi"
+58659,Nairobi,Kenya,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,64722,"Simba Union Ground, Nairobi"
+58661,Nairobi (Gym),Kenya,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,66052,"Gymkhana Club Ground, Nairobi"
+58671,Kuala Lumpur,Malaysia,2024-08-21,9999-12-31,https://images.icc-cricket.com/image/upload/prd/znojhtnglvsmedmfq7ij.pdf,verified_location,1446771,
+58678,Windhoek,Namibia,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,630951,"Wanderers Cricket Ground, Windhoek"
+58679,Windhoek,Namibia,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,1197507,"United Cricket Club Ground, Windhoek"
+58686,Amstelveen,Netherlands,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,65212,"VRA Ground, Amstelveen"
+58693,Deventer,Netherlands,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,1142503,"Sportpark Het Schootsveld, Deventer"
+58705,Utrecht,Netherlands,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,1178995,"Sportpark Maarschalkerweerd, Utrecht"
+58718,Rotterdam,Netherlands,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,296586,"Hazelaarweg, Rotterdam"
+58728,Schiedam,Netherlands,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,450383,"Sportpark Thurlede, Schiedam"
+58792,Auckland,New Zealand,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,62574,"Eden Park, Auckland"
+58810,Christchurch,New Zealand,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,696731,"Hagley Oval, Christchurch"
+58812,Christchurch,New Zealand,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,62572,"Lancaster Park, Christchurch"
+58822,Dunedin,New Zealand,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,62787,"Carisbrook, Dunedin"
+58827,Dunedin,New Zealand,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,300429,"University Oval, Dunedin"
+58831,Hamilton,New Zealand,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,64178,"Trust Bank Park, Hamilton"
+58847,Lincoln,New Zealand,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,696733,"Bert Sutcliffe Oval, Lincoln"
+58857,Napier,New Zealand,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,63233,"McLean Park, Napier"
+58865,New Plymouth,New Zealand,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,65120,"Pukekura Park, New Plymouth"
+58879,Taupo,New Zealand,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,64598,"Owen Delany Park, Taupo"
+58895,Wellington,New Zealand,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,62573,"Basin Reserve, Wellington"
+58899,Wellington,New Zealand,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,64643,"WestpacTrust Stadium, Wellington"
+58919,Queenstown,New Zealand,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,64816,"Davies Park, Queenstown"
+58921,Bahawalpur,Pakistan,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,62783,"Dring Stadium, Bahawalpur"
+58927,Faisalabad,Pakistan,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,63217,"Iqbal Stadium, Faisalabad"
+58930,Gujranwala,Pakistan,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,64197,"Municipal Stadium, Gujranwala"
+58936,Hyderabad (Sind),Pakistan,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,63106,"Niaz Stadium, Hyderabad, Sind"
+58950,Karachi,Pakistan,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,63624,"Defence Cricket Stadium, Karachi"
+58956,Karachi,Pakistan,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,62786,"National Stadium, Karachi"
+58965,Lahore,Pakistan,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,62784,"Bagh-e-Jinnah, Lahore"
+58967,Lahore,Pakistan,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,62866,Lahore Stadium
+58982,Multan,Pakistan,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,63275,"Ibn-e-Qasim Bagh Stadium, Multan"
+58986,Multan,Pakistan,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,63946,Multan Cricket Stadium
+58988,Peshawar,Pakistan,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,64243,"Arbab Niaz Stadium, Peshawar"
+58991,Peshawar,Pakistan,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,62785,"Services Ground, Peshawar"
+58995,Quetta,Pakistan,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,64165,"Ayub National Stadium, Quetta"
+58996,Quetta,Pakistan,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,64527,"Bugti Stadium, Quetta"
+59004,Rawalpindi,India,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,62974,"Pindi Club Ground, Rawalpindi"
+59006,Rawalpindi,Pakistan,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,64386,Rawalpindi Cricket Stadium
+59011,Sahiwal,Pakistan,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,64160,"Zafar Ali Stadium, Sahiwal"
+59014,Sargodha,Pakistan,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,64381,Sargodha Stadium
+59016,Sheikhupura,Pakistan,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,63722,Sheikhupura Stadium
+59018,Sialkot,Pakistan,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,64158,"Jinnah Stadium, Sialkot"
+59039,Benoni,South Africa,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,66076,"Willowmoore Park, Benoni"
+59042,Bloemfontein,South Africa,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,64405,"Springbok Park, Bloemfontein"
+59068,Cape Town,South Africa,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,62427,"Newlands, Cape Town"
+59079,Centurion,South Africa,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,64401,"Centurion Park, Verwoerdburg"
+59089,Durban,South Africa,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,62536,"Kingsmead, Durban"
+59090,Durban,South Africa,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,62502,"Lord's, Durban"
+59098,KuGumpo City,South Africa,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,64407,"Buffalo Park, East London"
+59112,Johannesburg,South Africa,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,62696,"Ellis Park, Johannesburg"
+59120,Johannesburg,South Africa,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,62820,"New Wanderers Stadium, Johannesburg"
+59122,Johannesburg,South Africa,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,62443,"Old Wanderers, Johannesburg"
+59135,Kimberley,South Africa,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,66081,Kimberley Country Club
+59147,Paarl,South Africa,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,66070,"Boland Bank Park, Paarl"
+59151,Pietermaritzburg,South Africa,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,65243,"City Oval, Pietermaritzburg"
+59159,Gqeberha,South Africa,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,62426,"Crusaders Ground, St George's Park, Port Elizabeth"
+59172,Potchefstroom,South Africa,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,64671,"North West Cricket Stadium, Potchefstroom"
+59255,Aberdeen,Scotland,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,325554,"Mannofield Park, Aberdeen"
+59258,Ayr,Scotland,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,253010,"Cambusdoon New Ground, Ayr"
+59264,Dundee,Scotland,2024-07-16,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,verified_location,1428956,
+59269,Edinburgh,Scotland,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,65209,"Grange Cricket Club Ground, Raeburn Place, Edinburgh"
+59275,Glasgow,Scotland,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,275789,"Titwood, Glasgow"
+59294,Colombo (CCC),Sri Lanka,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,63374,Colombo Cricket Club Ground
+59303,Colombo (PSS),Sri Lanka,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,63307,"P Saravanamuttu Stadium, Colombo"
+59306,Colombo (RPS),Sri Lanka,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,65810,"Khettarama Stadium, Colombo"
+59308,Colombo (SSC),Sri Lanka,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,64184,"Sinhalese Sports Club Ground, Colombo"
+59325,Galle,Sri Lanka,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,63802,Galle International Stadium
+59329,Kandy,Sri Lanka,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,63342,"Asgiriya Stadium, Kandy"
+59350,Moratuwa,Sri Lanka,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,64230,"Tyronne Fernando Stadium, Moratuwa"
+59368,Dambulla,Sri Lanka,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,64704,Rangiri Dambulla International Stadium
+59387,Singapore,Singapore,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,66232,"Kallang Ground, Singapore"
+59389,Singapore,Singapore,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,66025,"The Padang, Singapore"
+59392,Sharjah,United Arab Emirates,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,65668,Sharjah Cricket Association Stadium
+59396,Abu Dhabi,United Arab Emirates,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,244510,"Sheikh Zayed Stadium, Abu Dhabi"
+59401,Kampala,Uganda,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,1184260,"Lugogo Cricket Oval, Kampala"
+59402,Kampala,Uganda,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,1184258,"Kyambogo Cricket Oval, Kampala"
+59404,Jinja,Uganda,2024-10-28,9999-12-31,https://downloads.cricinfo.com/link_to_database/NATIONAL/ICC_MEMBERS/UGAN/NEWS/2002/OCT/UGANDA_HISTORY_TO_1999.pdf,verified_location,1457350,
+59417,Albion,West Indies,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,64159,"Albion Sports Complex, Albion, Guyana"
+59421,Basseterre,West Indies,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,239917,"Warner Park, Basseterre, St Kitts"
+59429,Bridgetown,West Indies,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,62576,"Kensington Oval, Bridgetown, Barbados"
+59434,Castries,West Indies,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,64164,"Mindoo Phillip Park, Castries, St Lucia"
+59447,Georgetown,West Indies,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,62578,"Bourda, Georgetown, British Guiana"
+59458,Kingston,West Indies,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,62579,"Sabina Park, Kingston, Jamaica"
+59463,Kingstown,West Indies,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,64176,"Arnos Vale Ground, Kingstown, St Vincent"
+59475,Port of Spain,West Indies,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,62577,"Queen's Park Oval, Port of Spain, Trinidad"
+59480,Roseau,West Indies,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,401073,"Windsor Park, Roseau, Dominica"
+59490,St George's,West Indies,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,64619,"Queen's Park (New), St George's, Grenada"
+59492,St George's,West Indies,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,64210,"Queen's Park (Old), St George's, Grenada"
+59495,St John's,West Indies,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,64163,"Antigua Recreation Ground, St John's, Antigua"
+59497,Coolidge,West Indies,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,1252066,"Coolidge Cricket Ground, Antigua"
+59518,Gros Islet,West Indies,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,64772,"Beausejour Stadium, Gros Islet, St Lucia"
+59534,Bulawayo,Zimbabwe,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,64396,Bulawayo Athletic Club
+59537,Bulawayo,Zimbabwe,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,63658,"Queens Sports Club, Bulawayo"
+59545,Harare,Zimbabwe,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,63583,Harare Sports Club
+59547,Harare,Zimbabwe,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,1133003,"Old Hararians, Harare"
+59553,Harare,Zimbabwe,2023-06-18,9999-12-31,https://www.icc-cricket.com/news/fixtures-released-for-icc-mens-cricket-world-cup-qualifier-2023,verified_location,1377747,
+59560,Kwekwe,Zimbabwe,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,64807,Kwekwe Sports Club
+59566,Kirtipur,Nepal,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,1208606,"Tribhuvan University International Cricket Ground, Kirtipur"
+59568,George Town,Cayman Islands,2022-04-13,9999-12-31,https://www.icc-cricket.com/about/members/associate/cayman-islands,verified_location,1310156,
+59569,George Town,Cayman Islands,2022-04-16,9999-12-31,https://www.icc-cricket.com/about/members/associate/cayman-islands,verified_location,1310158,
+59577,Lower Austria,Austria,2022-06-04,9999-12-31,https://www.austriacricket.at/cricket-in-our-academy/,verified_location,1317140,
+59590,Tangier,Morocco,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,66336,"National Cricket Stadium, Tangier"
+59611,Marsa,Malta,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,1202026,Marsa Sports Club
+208543,North Sound,West Indies,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,247481,"Sir Vivian Richards Stadium, North Sound, Antigua"
+208544,Providence,West Indies,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,247482,"Providence Stadium, Guyana"
+209731,Brondby,Denmark,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,1192823,"Svanholm Park, Brondby"
+236761,Mirpur,Bangladesh,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,264070,"Shere Bangla National Stadium, Mirpur"
+243446,Buenos Aires,Argentina,2023-02-21,9999-12-31,https://images.icc-cricket.com/image/upload/prd/webeladxgaykq4opb6yi.pdf,verified_location,1359786,
+247418,Tarouba,West Indies,2017-01-01,9999-12-31,https://www.windiescricket.com/news/cpl-venue-preview-brian-lara-cricket-academy/,audited_jurisdiction,1317903,
+256592,Kuala Lumpur,Malaysia,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,256606,"Kinrara Academy Oval, Kuala Lumpur"
+258033,Dar-es-Salaam,Tanzania,2024-09-21,9999-12-31,https://tanzaniacricket.com/contact-us/,verified_location,1450753,
+258034,Dar-es-Salaam,Tanzania,2022-10-31,9999-12-31,https://tanzaniacricket.com/contact-us/,verified_location,1342334,
+271573,Nairobi (Jaff),Kenya,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,267379,"Jaffery Sports Club Ground, Nairobi"
+298311,Townsville,Australia,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,791633,"Tony Ireland Stadium, Townsville"
+303209,St Martin,Jersey,2023-07-07,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,verified_location,1383062,
+304364,Kuala Lumpur,Malaysia,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,736497,"Bayuemas Oval, Kuala Lumpur"
+366603,St Peter Port,Guernsey,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,1185200,"College Field, St Peter Port"
+366605,Castel,Guernsey,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,1185201,"King George V Sports Ground, Castel"
+366641,Port Soif,Guernsey,2024-06-23,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,verified_location,1440131,
+369415,Dar-es-Salaam,Tanzania,2024-09-21,9999-12-31,https://tanzaniacricket.com/contact-us/,verified_location,1450751,
+375326,Nagpur,India,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,345672,"Vidarbha Cricket Association Stadium, Jamtha, Nagpur"
+377285,Rajkot,India,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,565812,"Saurashtra Cricket Association Stadium, Rajkot"
+378262,Lauderhill,United States of America,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,456991,"Central Broward Regional Park Stadium Turf Ground, Lauderhill"
+382533,Buenos Aires,Argentina,2023-10-18,9999-12-31,https://images.icc-cricket.com/image/upload/prd/webeladxgaykq4opb6yi.pdf,verified_location,1403297,
+392627,Dubai (DICS),United Arab Emirates,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,392616,Dubai International Cricket Stadium
+418531,Waterloo,Belgium,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,1183920,"Royal Brussels Cricket Club Ground, Waterloo"
+419210,Singapore,Singapore,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,1190767,"Indian Association Ground, Singapore"
+424917,Nelson,New Zealand,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,661691,"Saxton Oval, Nelson"
+434210,Hambantota,Sri Lanka,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,433560,"Mahinda Rajapaksa International Cricket Stadium, Sooriyawewa, Hambantota"
+434211,Pallekele,Sri Lanka,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,464989,Pallekele International Cricket Stadium
+441704,Whangarei,New Zealand,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,520593,"Cobham Oval (New), Whangarei"
+444258,Mount Maunganui,New Zealand,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,696747,"Bay Oval, Mount Maunganui"
+451579,Dubai,United Arab Emirates,2026-01-23,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,verified_location,1519136,
+461400,The Hague,Netherlands,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,450370,"Sportpark Westvliet, Voorburg"
+462697,Naucalpan,Mexico,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,1181405,"Reforma Athletic Club, Naucalpan"
+463140,Durban,South Africa,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,463149,"Moses Mabhida Stadium, Durban"
+468804,Castletown,Isle of Man,2023-07-09,9999-12-31,https://www.iomcricket.co.uk/uploads/4/9/2/0/49200123/10771_ravenscroft_cricstart_flyer_june_2022.pdf,verified_location,1383065,
+468808,Tromode,Isle of Man,2025-09-06,9999-12-31,https://www.iomcricket.co.uk/uploads/4/9/2/0/49200123/10771_ravenscroft_cricstart_flyer_june_2022.pdf,verified_location,1498700,
+475201,Windhoek,Namibia,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,1174844,"Affies Park, Windhoek"
+481147,ICCA Dubai,United Arab Emirates,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,546411,"ICC Global Cricket Academy, Dubai"
+485865,Ranchi,India,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,565814,"JSCA International Stadium Complex, Ranchi"
+491951,Bangkok,Thailand,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,1217738,"Terdthai Cricket Ground, Bangkok"
+493864,Mong Kok,Hong Kong,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,952183,"Mission Road Ground, Mong Kok, Hong Kong"
+499767,ICCA 2 Dubai,United Arab Emirates,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,1199506,"ICC Academy Ground No 2, Dubai"
+507116,Accra,Ghana,2024-03-21,9999-12-31,https://www.icc-cricket.com/about/members/associate/ghana-cricket-association,verified_location,1424764,
+507117,Accra,Ghana,2024-03-17,9999-12-31,https://www.icc-cricket.com/about/members/associate/ghana-cricket-association,verified_location,1424753,
+511453,Gaborone (Oval 1),Botswana,2026-03-09,9999-12-31,https://www.icc-cricket.com/media-releases/botswana-ready-to-host-icc-men-s-t20-world-cup-sub-regional-africa-qualifier-a-in-gaborone,verified_location,1527277,
+511454,Gaborone (Oval 2),Botswana,2026-05-23,9999-12-31,https://www.icc-cricket.com/media-releases/botswana-ready-to-host-icc-men-s-t20-world-cup-sub-regional-africa-qualifier-a-in-gaborone,verified_location,1535415,
+514137,Cartagena,Spain,2024-04-14,9999-12-31,https://www.lamangaclub.com/en/sports/cricket/,verified_location,1426479,
+514726,Ljubljana,Slovenia,2024-06-29,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,verified_location,1440132,
+518990,Port Moresby,Papua New Guinea,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,1105005,"Amini Park, Port Moresby"
+533111,Entebbe,Uganda,2021-09-10,9999-12-31,https://downloads.cricinfo.com/link_to_database/NATIONAL/ICC_MEMBERS/UGAN/NEWS/2002/OCT/UGANDA_HISTORY_TO_1999.pdf,verified_location,1275041,
+545380,Pune,India,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,565810,"Subrata Roy Sahara Stadium, Pune"
+547453,Apia (No 1),Samoa,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,1192811,"Faleata Oval No 1, Apia"
+550637,Corfu,Greece,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,1203831,"Marina Ground, Corfu"
+568785,Cartagena,Spain,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,1175344,La Manga Club Bottom Ground
+579731,Apia (No 2),Samoa,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,1192814,"Faleata Oval No 2, Apia"
+579732,Apia (No 3),Samoa,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,1192812,"Faleata Oval No 3, Apia"
+584781,Tolerance Oval,United Arab Emirates,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,1199509,"Sheikh Zayed Stadium Nursery 1, Abu Dhabi"
+601879,Raipur,India,2023-01-21,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,verified_location,1348647,
+660045,Abu Dhabi,United Arab Emirates,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,1162727,"Nursery Oval, Abu Dhabi"
+680295,Guwahati,India,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,1119502,"Barsapara Cricket Stadium, Guwahati"
+698949,Doha,Qatar,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,1192556,"West End Park International Cricket Stadium, Doha"
+777985,Incheon,South Korea,2024-09-25,9999-12-31,https://www.icc-cricket.com/about/members/associate/korea-cricket-association,verified_location,1450766,
+875409,Edinburgh (Golden),Scotland,2023-07-20,9999-12-31,https://heriotscc.co.uk/contact-us,verified_location,1383069,
+942501,Greater Noida,India,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,1040485,"Greater Noida Sports Complex Ground, Greater Noida"
+1034199,Pearland,United States of America,2022-05-28,9999-12-31,https://www.icc-cricket.com/news/testing-time-for-league-2-sides-as-action-resumes-stateside,verified_location,1312798,
+1061638,Sano,Japan,2022-10-09,9999-12-31,https://www.cricket.or.jp/en/news/suzuki-cup-india-japan-75th-anniversary-cricket-match,verified_location,1333930,
+1070094,Lucknow,India,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,1157760,"Ekana International Cricket Stadium, Lucknow"
+1095893,Al Amerat,Oman,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,1171752,Al Amerat Cricket Ground Oman Cricket (Ministry Turf 1)
+1120086,Thiruvananthapuram,India,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,1120095,"Greenfield International Stadium, Thiruvananthapuram"
+1126475,Perth,Australia,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,1072314,Perth Stadium
+1143084,Lagos,Nigeria,2023-10-04,9999-12-31,https://www.icc-cricket.com/about/members/associate/nigeria-cricket-federation,verified_location,1400972,
+1144272,Bangi,Malaysia,2022-07-02,9999-12-31,https://images.icc-cricket.com/image/upload/prd/znojhtnglvsmedmfq7ij.pdf,verified_location,1321998,
+1145946,Dehradun,India,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,1145982,"Rajiv Gandhi International Cricket Stadium, Dehradun"
+1147785,Mulpani,Nepal,2023-04-29,9999-12-31,https://cricketnepal.org.np/ground-detail/,verified_location,1368000,
+1151242,Rwanda,Rwanda,2021-08-18,9999-12-31,https://www.icc-cricket.com/media-releases/rwanda-ready-for-icc-u19-men-s-cricket-world-cup-africa-qualifier,verified_location,1273141,
+1154905,Suva,Fiji,2023-03-13,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,verified_location,1362243,
+1154906,Suva,Fiji,2023-03-17,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,verified_location,1363550,
+1156236,Cundinamarca,Colombia,2026-08-06,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,verified_location,1545654,
+1156237,Cundinamarca,Colombia,2026-08-08,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,verified_location,1545658,
+1162812,Al Amerat,Oman,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,1171753,Al Amerat Cricket Ground Oman Cricket (Ministry Turf 2)
+1179866,Bali,Indonesia,2023-11-20,9999-12-31,https://www.icc-cricket.com/about/members/associate/persatuan-cricket-indonesia?appview=true,verified_location,1407714,
+1185740,Sano,Japan,2026-05-12,9999-12-31,https://www.cricket.or.jp/en/news/suzuki-cup-india-japan-75th-anniversary-cricket-match,verified_location,1532647,
+1195112,Kerava,Finland,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,1195132,Kerava National Cricket Ground
+1197492,Sandys Parish,Bermuda,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,1197396,"White Hill Field, Sandys Parish"
+1197827,Ilfov County,Romania,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,1197841,"Moara Vlasiei Cricket Ground, Ilfov County"
+1200184,Cortijo Polo Club Pitch A,Peru,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,1200202,"El Cortijo Polo Club Pitch A Ground, Lima"
+1200185,Cortijo Polo Club Pitch B,Peru,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,1200203,"El Cortijo Polo Club Pitch B Ground, Lima"
+1200201,Lima Cricket and Football,Peru,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,1200212,Lima Cricket and Football Club
+1205146,Lilongwe,Malawi,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,1205260,"Lilongwe Golf Club, Lilongwe"
+1205147,Blantyre,Malawi,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,1205266,"Saint Andrews International High School, Blantyre"
+1205153,Blantyre,Malawi,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,1205264,"Indian Sports Club, Blantyre"
+1207080,Almeria,Spain,1877-01-01,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,legacy_match_link,1207081,"Desert Springs Cricket Ground, Almeria"
+1207464,Guacima,Costa Rica,2024-04-11,9999-12-31,https://costaricacricket.org/wp-content/uploads/2024/12/para-face.pdf,verified_location,1428742,
+1226630,Walferdange,Luxembourg,2020-08-28,9999-12-31,https://luxembourgcricket.org/contact-us,verified_location,1229818,Pierre Werner Cricket Ground
+1230852,Vinor,Czech Republic,2021-05-21,9999-12-31,https://www.praguecricket.cz/about/about-prague-t10-challenger,verified_location,1263708,"Scott Page Field, Vinor"
+1232767,Sofia,Bulgaria,2020-09-23,9999-12-31,https://www.icc-cricket.com/about/members/associate/bulgaria,verified_location,1233064,"National Sports Academy, Sofia"
+1268729,Krefeld,Germany,2021-08-05,9999-12-31,https://www.cricket.de/dcb-proud-to-announce-first-national-performance-centre-in-krefeld-english-version/,verified_location,1271445,Bayer Uerdingen Cricket Ground
+1272298,Spinaceto,Italy,2024-06-09,9999-12-31,https://www.commonwealthclubrome.org/cricket-grounds--nets.html,verified_location,1436471,
+1272301,Albergaria,Portugal,2021-08-19,9999-12-31,https://www.cricketportugal.com/,verified_location,1273135,
+1278780,Kigali,Rwanda,2021-10-16,9999-12-31,https://www.icc-cricket.com/media-releases/rwanda-ready-for-icc-u19-men-s-cricket-world-cup-africa-qualifier,verified_location,1283022,
+1279324,Episkopi,Cyprus,2021-10-05,9999-12-31,https://www.cricket.cy/facilities/,verified_location,1279379,
+1283147,Lagos,Nigeria,2021-10-19,9999-12-31,https://www.icc-cricket.com/about/members/associate/nigeria-cricket-federation,verified_location,1283089,
+1290799,New Chandigarh,India,2024-01-01,9999-12-31,https://cricketpunjab.in/pdf/Terms-condition--2024444.pdf,audited_jurisdiction,1479577,
+1310144,Dreux,France,2024-05-09,9999-12-31,https://www.pre.francecricket.com/competitions/adresses-des-terrains/,verified_location,1432194,
+1312726,Prairie View,United States of America,2024-04-07,9999-12-31,https://pvcricketcomplex.com/,verified_location,1425121,
+1318846,Gent,Belgium,2022-06-11,9999-12-31,https://cricket-vlaanderen.be/clubs/,verified_location,1318354,
+1321048,Vantaa,Finland,2022-07-12,9999-12-31,https://cricketfinland.com/wp-content/uploads/2024/05/TCG-GSI-2024-Final-v1.pdf,verified_location,1321257,
+1323497,Belgrade,Serbia,2022-07-08,9999-12-31,https://www.serbiacricket.com/wp-content/uploads/2018/05/Press-Clipping-SCF-TOTAL.pdf,verified_location,1323550,
+1326810,Malkerns,Eswatini,2022-07-29,9999-12-31,https://eswatinicricket.com/,verified_location,1326825,
+1337108,Seropedica,Brazil,2024-10-12,9999-12-31,https://www.lords.org/lords/news-stories/success-for-both-mcc-teams-on-historic-tour-to-brazil,verified_location,1453903,
+1338070,Port vila,Vanuatu,2022-09-09,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,verified_location,1333918,
+1339709,Itaguai,Brazil,2025-10-30,9999-12-31,https://www.lords.org/lords/news-stories/success-for-both-mcc-teams-on-historic-tour-to-brazil,verified_location,1507418,
+1346394,Nairobi,Kenya,2024-06-28,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,verified_location,1441133,
+1364461,Gibraltar,Gibraltar,2023-05-04,9999-12-31,https://www.gibraltar.gov.gi/press-releases/europa-sports-complex-upgrade-462024-9571,verified_location,1367725,
+1366586,Tallinn,Estonia,2025-07-25,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,verified_location,1494770,
+1369901,Glostrup,Denmark,2023-05-18,9999-12-31,https://cricket.dk/sommerens-aktiviteter/,verified_location,1370784,
+1370729,Phnom Penh,Cambodia,2023-05-01,9999-12-31,https://www.icc-cricket.com/about/members/associate/cambodia,verified_location,1370792,
+1377972,Hangzhou,China,2023-09-27,9999-12-31,https://www.hangzhou2022.cn/En/presscenter/spotnews/latestnews/202107/t20210716_34760.shtml,verified_location,1399104,
+1381196,Dallas,United States of America,2024-06-01,9999-12-31,https://images.icc-cricket.com/image/upload/prd/sgzwqj5uob8soxcf6kah.pdf,verified_location,1415701,
+1390143,Szodliget,Hungary,2023-08-05,9999-12-31,https://dunamentikenguruk.com/english/,verified_location,1390167,
+1417066,New York,United States of America,2024-06-03,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,verified_location,1415704,
+1417929,Vadodara,India,2026-01-11,9999-12-31,https://www.bcci.tv/matches/996d796f-8f29-4511-87d8-c5dcfff80043/More/match-details,verified_location,1490231,
+1422839,Doha,Qatar,2024-02-27,9999-12-31,https://www.qcsf.qa/en/qcsf-tournaments-in-cricket-and-table-tennis-to-start-sunday/,verified_location,1422802,
+1434553,Rome,Italy,2024-06-09,9999-12-31,https://www.commonwealthclubrome.org/cricket-grounds--nets.html,verified_location,1436472,
+1435506,Rwanda,Rwanda,2026-09-08,9999-12-31,https://www.icc-cricket.com/media-releases/rwanda-ready-for-icc-u19-men-s-cricket-world-cup-africa-qualifier,verified_location,1552906,
+1437708,Episkopi,Cyprus,2025-10-31,9999-12-31,https://www.cricket.cy/facilities/,verified_location,1506440,
+1444358,Zagreb,Croatia,2024-08-02,9999-12-31,https://www.icc-cricket.com/about/members/associate/croatia,verified_location,1444947,
+1445197,Oslo,Norway,2025-08-17,9999-12-31,https://www.icc-cricket.com/about/members/associate/norges-cricketforbund,verified_location,1496827,
+1447330,Gwalior,India,2024-10-06,9999-12-31,https://github.com/outside-edge/fairly_random/blob/0ed74ecb4f193b4225e9801a9a8cdbe753b82861/data/grounds.csv,verified_location,1439893,
+1449885,Koge,Denmark,2025-06-14,9999-12-31,https://cricket.dk/sommerens-aktiviteter/,verified_location,1488340,
+1453446,Gelephu,Bhutan,2024-10-19,9999-12-31,https://cricketbhutan.org/gelephu-international-cricket-ground/,verified_location,1453911,
+1453993,Singapore,Singapore,2025-02-28,9999-12-31,https://singaporecricket.org/wp-content/uploads/2024/11/FLOOD-LIGHT-SNCG-NOTICE-OF-INVITATION-TO-TENDER-28-OCTOBER-2024.pdf,verified_location,1474260,
+1454354,Blantyre,Malawi,2024-10-09,9999-12-31,https://mw.linkedin.com/company/cricket-malawi,verified_location,1454384,
+1461783,Abuja,Nigeria,2024-11-23,9999-12-31,https://www.icc-cricket.com/media-releases/nigeria-to-stage-africa-s-final-sub-regional-qualifier-on-route-to-icc-men-s-t20-world-cup-2028,verified_location,1459374,
+1461784,Abuja,Nigeria,2024-11-23,9999-12-31,https://www.icc-cricket.com/media-releases/nigeria-to-stage-africa-s-final-sub-regional-qualifier-on-route-to-icc-men-s-t20-world-cup-2028,verified_location,1459376,
+1476748,Windhoek,Namibia,2025-03-19,9999-12-31,https://www.icc-cricket.com/news/namibia-welcome-the-world-as-stadium-build-nears-completion,verified_location,1476795,
+1479591,Windhoek,Namibia,2026-10-22,9999-12-31,https://cricketireland.ie/tour-of-namibia-2026/,verified_location,1558231,
+1480628,Panama City,Panama,2025-04-17,9999-12-31,https://cricheroes.com/tournament/1287928/copa-panama-2025/matches/past-matches,verified_location,1481295,
+1483644,Zemst,Belgium,2025-05-30,9999-12-31,https://cricket-vlaanderen.be/clubs/,verified_location,1485343,
+1486207,Latschach,Austria,2025-05-17,9999-12-31,https://www.austriacricket.at/cricket-in-our-academy/,verified_location,1486225,
+1486209,Graz,Austria,2025-05-18,9999-12-31,https://www.austriacricket.at/cricket-in-our-academy/,verified_location,1486227,
+1487979,Ishoj,Denmark,2025-06-13,9999-12-31,https://cricket.dk/sommerens-aktiviteter/,verified_location,1488338,
+1496476,Stockholm,Sweden,2025-08-07,9999-12-31,https://www.rfsisu.se/download/18.3a49cf0d18f37aafb1b2140d/1714736110132/Regional%2520samverkan.pdf,verified_location,1496819,
+1531879,Nisshin,Japan,2026-05-08,9999-12-31,https://www.icc-cricket.com/news/a-new-dawn-in-nagoya-as-japan-ground-shines-in-first-event,verified_location,1532638,

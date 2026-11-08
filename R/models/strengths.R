@@ -3,11 +3,7 @@ quarter_date <- function(index) {
 }
 
 export_model_strengths <- function(spline, stan, train, origin, output, current = FALSE) {
-  teams <- unique(rbind(
-    data.frame(team_id = train$team1_id, team = train$team1),
-    data.frame(team_id = train$team2_id, team = train$team2)
-  ))
-  teams <- teams[order(teams$team_id), ]
+  teams <- latest_team_labels(train)
   quarters <- seq(min(quarter_index(train$start_date)), quarter_index(origin))
   dates <- quarter_date(quarters)
   dates <- sort(unique(c(dates[dates >= min(train$start_date)], as.Date(origin))))
