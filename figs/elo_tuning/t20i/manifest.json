@@ -1,0 +1,14 @@
+{
+  "analysis_sha256": "6d2c82577b24c9572533e5ef45fe4d30a7c0d46febfa466e6f10fbba3411ae4d",
+  "code_sha256": {
+    "R/models/elo_tuning_plots.R": "3a7a26e18a640d44f75d6c11bc87e418a7c20720b6d133071bd2b0682ed9d794",
+    "R/visualization.R": "27a70ea1efef560ec7f930e4a9f5a9681c25183ada10df67e0c3b267f909a011",
+    "renv.lock": "8cdce78e86f45f2f97b0d254f2d773816d37179681544333fadbeed1c2ff222c"
+  },
+  "files": {
+    "annual_difference.png": "3df420ab5c6d0248d50f15da6587677421c584f8748b986d44eb8b16744220cc",
+    "annual_difference.svg": "c5773e2e210fea355e4db7866af326289c59110809a3153715b066c67582382d",
+    "tuning_curve.png": "58166e383a7d43191a0387aaca07f3a373494061691b3cf9a1a769ca1bdfc2be",
+    "tuning_curve.svg": "b37a1bc6d88946169947c622b56753ee1dc3d1c009ca751b728ce21ecbf86b5b"
+  }
+}

@@ -6,7 +6,7 @@ write_json <- function(value, path) {
 
 code_fingerprint <- function() {
   modules <- setdiff(list.files("R", pattern = "\\.R$", full.names = TRUE), "R/site.R")
-  paths <- sort(c(modules, "scripts/pipeline.R", "renv.lock"))
+  paths <- sort(c(modules, "R/models/elo_tuning.R", "scripts/pipeline.R", "renv.lock"))
   if (length(paths) < 3L || !all(file.exists(paths))) stop("Run from the repository root to record code provenance")
   as.list(setNames(vapply(paths, sha256, character(1)), paths))
 }
@@ -62,25 +62,30 @@ read_prepared <- function(directory) {
   list(matches = as.data.frame(matches), manifest = manifest)
 }
 
-analyze_data <- function(input, output, model = "elo") {
+analyze_data <- function(input, output, model = "elo", k = NULL) {
   if (model != "elo") stop("No verified pipeline adapter for model: ", model)
   data <- read_prepared(input)
-  result <- calculate_elo(data$matches, as.Date(data$manifest$as_of))
+  as_of <- as.Date(data$manifest$as_of)
+  selected <- if (is.null(k)) select_production_elo_k(data$matches, as_of) else NULL
+  if (!is.null(selected)) k <- selected$k
+  result <- calculate_elo(data$matches, as_of, k = k, selection = selected$specification)
   replace_directory(output, function(directory) {
     for (name in c("latest", "monthly", "updates")) {
       readr::write_csv(result[[name]], file.path(directory, paste0(name, ".csv")), na = "")
     }
+    if (!is.null(selected)) {
+      readr::write_csv(selected$selections, file.path(directory, "k_selection.csv"))
+      readr::write_csv(selected$curves, file.path(directory, "k_tuning.csv"))
+    }
     saveRDS(result$models, file.path(directory, "fits.rds"))
+    files <- list.files(directory, pattern = "[.]csv$", full.names = TRUE)
     metadata <- list(
       model = model, as_of = data$manifest$as_of,
       input_sha256 = data$manifest$matches_sha256, specification = result$specification,
       last_result = lapply(split(data$matches$end_date, data$matches$format), function(dates) as.character(max(dates))),
       r_version = as.character(getRversion()),
       code_sha256 = code_fingerprint(),
-      files = as.list(setNames(vapply(
-        file.path(directory, paste0(c("latest", "monthly", "updates"), ".csv")),
-        sha256, character(1)
-      ), paste0(c("latest", "monthly", "updates"), ".csv")))
+      files = as.list(setNames(vapply(files, sha256, character(1)), basename(files)))
     )
     write_json(metadata, file.path(directory, "manifest.json"))
     metadata
@@ -137,7 +142,7 @@ write_report <- function(data, path) {
     paste0("# ", toupper(data$manifest$model), " cricket ratings through ", data$manifest$as_of), "",
     "Independent ratings of men's international teams. Results enter on their completion date.", "",
     "[Latest ratings](latest.csv) · [Monthly history](monthly.csv) · [Match updates](updates.csv)", "",
-    "[Methods and limitations](../../../README.md#elo-specification)", ""
+    "[Methods and limitations](../../../docs/pipeline.md#elo-specification)", ""
   )
   for (format in unique(data$latest$format)) {
     rows <- data$latest[data$latest$format == format & data$latest$is_active, ]
@@ -145,6 +150,7 @@ write_report <- function(data, path) {
     lines <- c(
       lines, paste0("## ", format), "",
       paste("Most recent recorded result:", data$manifest$last_result[[format]]), "",
+      paste("K:", data$manifest$specification$k[[format]]), "",
       paste0("![", format, " recent rating history](", tolower(format), ".png)"), "",
       paste0("[Download recent-history SVG](", tolower(format), ".svg)"), "",
       "<details>", "<summary>Full history by team</summary>", "",
@@ -189,7 +195,7 @@ publish_data <- function(prepared, analysis, figures, output, require_fresh = TR
   }
   replace_directory(output, function(directory) {
     inputs <- c(
-      file.path(analysis, c("latest.csv", "monthly.csv", "updates.csv")),
+      file.path(analysis, names(data$manifest$files)),
       file.path(figures, names(visual$files))
     )
     if (!all(file.copy(inputs, directory))) stop("Cannot stage publication")

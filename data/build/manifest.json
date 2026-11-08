@@ -2074,11 +2074,12 @@
   "matches_sha256": "93493cb0b02e7fa2d725780fcaff15b3948b0d2f20c70a0a91e059547e7ba733",
   "code_sha256": {
     "R/acquisition.R": "70a51080e845100a95fe9b96cdc70a5803a1f1ecc4b19872eafedd37a8abdf0e",
-    "R/elo.R": "3bca27c1c77aa1f83d4b61ab5ac6b9e4b82ece4b31547806a4fdb2abaacf325e",
+    "R/elo.R": "bb6a9d4cd716eb0f2215f06797f19f0af82851e86554fd7785cd53e4074c6a94",
+    "R/models/elo_tuning.R": "f13e1d14472784ba665411a4ca71f188ff29caee73b08028a0e18fdac0dc7784",
     "R/paths.R": "c267c8c657ffa7b4641f2d36e792d57fe50e95186ebb8ca1571e35855198cad1",
-    "R/pipeline.R": "dd1612e1e4617529e25ffdac6314c48a21de7b1ad33c56cdaf03a2851aed442e",
-    "R/visualization.R": "971a73ad37b497a8b2f413d20eccc1963512f2224f66185bb31a4aaed092bee4",
+    "R/pipeline.R": "314d55a31783bca728d419d050774b35713fb09729b3f6977981d21815070a5f",
+    "R/visualization.R": "27a70ea1efef560ec7f930e4a9f5a9681c25183ada10df67e0c3b267f909a011",
     "renv.lock": "8cdce78e86f45f2f97b0d254f2d773816d37179681544333fadbeed1c2ff222c",
-    "scripts/pipeline.R": "8875853301c18073af95add7841762f5491c0c6e80640f4b65527c51d02ba824"
+    "scripts/pipeline.R": "0ffb82ce50108112a9a7a03bad83190a93ed135036d4176264f120faad52b6c1"
   }
 }

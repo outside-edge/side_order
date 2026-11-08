@@ -1,14 +1,18 @@
-elo_specification <- function() {
+elo_specification <- function(k = 100, selection = NULL) {
   list(
     model = "elo", implementation = "EloRating::e.single", version = as.character(utils::packageVersion("EloRating")),
-    initial_rating = 1000, k = 100, expectation = "normal CDF", rounding = "nearest integer, ties to even",
+    initial_rating = 1000, k = k, k_selection = selection,
+    expectation = "normal CDF", rounding = "nearest integer, ties to even",
     ties = "0.5 each, including regulation ties resolved by a tiebreaker",
     no_result = "no update", order = "end_date, start_date, match_id",
     history = "calendar month end; carry forward; no interpolation", active_days = 730, provisional_matches = 10
   )
 }
 
-fit_elo <- function(matches) {
+fit_elo <- function(matches, k = 100) {
+  if (length(k) != 1L || !is.numeric(k) || is.na(k) || !is.finite(k) || k <= 0) {
+    stop("K must be a positive finite number")
+  }
   matches <- matches[!is.na(matches$score), ]
   matches <- matches[order(matches$end_date, matches$start_date, matches$match_id), ]
   if (!nrow(matches)) stop("No rated matches")
@@ -29,7 +33,7 @@ fit_elo <- function(matches) {
     updates$team2_before[i] <- values[b]
     pair <- if (matches$score[i] >= 0.5) c(a, b) else c(b, a)
     outcome <- if (matches$score[i] == 0.5) 0 else 1
-    values[pair] <- EloRating::e.single(values[pair[1]], values[pair[2]], outcome, k = 100, normprob = TRUE)
+    values[pair] <- EloRating::e.single(values[pair[1]], values[pair[2]], outcome, k = k, normprob = TRUE)
     updates$team1_after[i] <- values[a]
     updates$team2_after[i] <- values[b]
   }
@@ -73,22 +77,33 @@ elo_snapshot <- function(model, date) {
   result
 }
 
-calculate_elo <- function(matches, as_of) {
+calculate_elo <- function(matches, as_of, k = 100, selection = NULL) {
   matches <- matches[matches$end_date <= as_of, ]
   pools <- split(matches, matches$format)
-  models <- lapply(pools, fit_elo)
+  if (length(k) == 1L && is.null(names(k))) k <- setNames(rep(k, length(pools)), names(pools))
+  if (!is.numeric(k) || anyDuplicated(names(k)) || !setequal(names(k), names(pools))) {
+    stop("K must be a scalar or a named value for each format")
+  }
+  models <- lapply(names(pools), function(format) fit_elo(pools[[format]], k[[format]]))
+  names(models) <- names(pools)
   latest <- do.call(rbind, lapply(models, elo_snapshot, date = as_of))
   monthly <- lapply(models, function(model) {
     first <- as.Date(format(min(model$matches$end_date), "%Y-%m-01"))
     last <- as.Date(format(as_of, "%Y-%m-01"))
     ends <- seq(first, seq(last, by = "month", length.out = 2)[2], by = "month")[-1] - 1
     ends <- ends[ends <= as_of]
-    if (!length(ends)) return(latest[FALSE, ])
+    if (!length(ends)) {
+      return(latest[FALSE, ])
+    }
     do.call(rbind, lapply(as.list(ends), function(date) elo_snapshot(model, date)))
   })
+  monthly <- do.call(rbind, monthly)
+  updates <- do.call(rbind, lapply(models, `[[`, "updates"))
+  latest$k <- unname(k[latest$format])
+  monthly$k <- unname(k[monthly$format])
+  updates$k <- unname(k[updates$format])
   list(
-    latest = latest, monthly = do.call(rbind, monthly),
-    updates = do.call(rbind, lapply(models, `[[`, "updates")), models = models,
-    specification = elo_specification()
+    latest = latest, monthly = monthly, updates = updates, models = models,
+    specification = elo_specification(as.list(k), selection)
   )
 }

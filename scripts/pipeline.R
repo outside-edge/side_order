@@ -18,6 +18,7 @@ source("R/acquisition.R")
 source("R/elo.R")
 source("R/visualization.R")
 source("R/pipeline.R")
+source("R/models/elo_tuning.R")
 if (command %in% c("fetch", "update")) fetch_sources(pipeline_paths$raw, as_of, refresh)
 if (command %in% c("prepare", "update")) {
   prepare_data(pipeline_paths$raw, pipeline_paths$matches, as_of, command == "update")

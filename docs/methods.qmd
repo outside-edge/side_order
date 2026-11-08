@@ -17,8 +17,8 @@ opponent's rating. Test, ODI, and T20I matches form separate rating pools.
 ```{r}
 #| results: asis
 settings <- data.frame(
-  Setting = c("Initial rating", "K", "Expected score", "Ties", "No-result matches", "Update order"),
-  Value = c(spec$initial_rating, spec$k, spec$expectation, spec$ties, spec$no_result, spec$order)
+  Setting = c("Initial rating", "Expected score", "Ties", "No-result matches", "Update order"),
+  Value = c(spec$initial_rating, spec$expectation, spec$ties, spec$no_result, spec$order)
 )
 knitr::kable(settings, format = "html", escape = TRUE)
 ```
@@ -31,6 +31,36 @@ The implementation is `r spec$implementation`, version `r spec$version`, from
 the R package [EloRating](https://cran.r-project.org/package=EloRating).
 The complete specification is included in the [publication metadata](../out/release/elo/manifest.json).
 
+## Selecting K
+
+K controls how strongly each result changes a rating. Each format selects its
+own value using a January 1 cutoff in the publication year and the preceding
+five complete calendar years. Each candidate's forecasts use only results completed
+before the match starts. The selected value minimizes average squared error of
+the expected score, including draws and ties as 0.5. This is a grid optimum for
+that scoring rule and period, not a universally optimal constant.
+
+```{r}
+#| results: asis
+selection <- readr::read_csv("out/release/elo/k_selection.csv", show_col_types = FALSE)
+knitr::kable(selection[c("format", "k", "origin", "tuning_start", "tuning_end", "n_tuning")],
+  format = "html", escape = TRUE, row.names = FALSE)
+```
+
+Selection is recomputed from the saved source version, so corrections to prior
+years can change K within the publication year. The current partial year cannot
+select K. Ratings do incorporate completed
+matches from that year after selection. Search candidates are integers 1–200
+and 220–400 in increments of 20; exact loss ties prefer the smaller K.
+At least 100 tuning matches and observations in each tuning year are required.
+
+Download the [selection results](../out/release/elo/k_selection.csv) and
+[candidate loss curves](../out/release/elo/k_tuning.csv). Historical evaluation
+also compares three- and ten-year windows with the fixed K=100 baseline.
+Those comparisons are retrospective; they are not blinded confirmation.
+The same selection rule is used for each format, including T20Is where the
+historical improvement over K=100 was small.
+
 ## Dates and history
 
 Matches enter on their completion date. Same-day results use the deterministic
@@ -41,6 +71,9 @@ Ratings carry forward between results. The charts do not smooth the estimates.
 Histories are reconstructed from the current saved source version. They do not
 prove what could have been known from the source at an earlier date. Git history
 records successive actual publications.
+Each publication replays the entire format's history with its selected K.
+Consequently, the historical curves are retrospective estimates using a current
+parameter; they are not the forecasts used to evaluate annual selection.
 
 ## Which teams are ranked?
 

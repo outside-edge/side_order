@@ -34,7 +34,8 @@ strictly before the origin; an ongoing Test cannot contribute its result.
 * **Glicko-2:** PlayerRatings, calendar-month periods, including empty periods,
   default volatility and rating-deviation settings documented in the output.
   This is an uncertainty-aware comparator without contextual covariates.
-* **Elo:** the production normal-CDF, K=100, integer-rounded update rule.
+* **Elo:** the original normal-CDF, K=100, integer-rounded baseline. The current
+  publication now selects K by format; this saved pilot retains its original baseline.
   Neither Elo nor Glicko's expected score is a three-category probability.
   Their rating differences receive an ordered-logistic calibration trained on
   earlier out-of-period predictions, with a symmetric fixed-threshold grid.

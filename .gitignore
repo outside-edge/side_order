@@ -23,6 +23,9 @@ out/analysis/models/**/stan_draws/
 out/analysis/models/**/failed-*/
 out/analysis/current/**/stan_draws/
 out/analysis/current/**/failed-*/
+out/analysis/elo_tuning/**/failed-*/
+figs/elo_tuning/**/stage-*/
+figs/elo_tuning/**/*.previous/
 
 /.quarto/
 **/*.quarto_ipynb

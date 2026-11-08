@@ -1,0 +1,2 @@
+format,window,year,origin,tuning_start,supported,n_tuning,selected_k,boundary,n_evaluation,partial_year,tuned_mse,baseline_mse,neutral_mse,tuning_mse,near_minimum_low,near_minimum_high,near_minimum_count
+T20I,5,2026,2026-01-01,2021-01-01,TRUE,2477,77,FALSE,551,TRUE,0.18639907487823368,0.18527078884059006,0.24818511796733211,0.21283981661983492,53,100,48

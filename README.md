@@ -38,7 +38,9 @@ Rendering reads the saved publication without fetching data or refitting models.
 
 Elo updates ratings after each completed match. Draws and ties count as half-results;
 abandoned, cancelled, and no-result matches cause no update. The published Elo
-model has no venue adjustment or uncertainty intervals.
+model selects K separately for each format using forecasts from the preceding
+five complete years. Each publication replays history with its selected K.
+It has no venue adjustment or uncertainty intervals.
 
 The experimental models add different accounts of team strength:
 
@@ -61,6 +63,7 @@ validation protocol, and commands to reproduce the fits.
 
 ## Documentation
 
+- [Elo K selection](docs/pipeline.md#selecting-k): chronological selection and reproduction commands.
 - [Research and evaluation](https://outside-edge.github.io/side_order/docs/research.html): historical forecasts and model development.
 - [Pipeline guide](docs/pipeline.md): data sources, Elo specification, updates, and local checks.
 - [Modeling agenda](docs/rating_models.md): team versus lineup strength, venue context, and forecast evaluation.

@@ -8,11 +8,14 @@ stem <- tolower(format_name)
 
 **Elo ratings through `r publication$manifest$analysis$as_of`.**
 Most recent recorded result: `r publication$manifest$analysis$last_result[[format_name]]`.
+K = `r publication$manifest$analysis$specification$k[[format_name]]`, selected using
+the preceding five complete years. [Selection method](methods.qmd#selecting-k).
 
 ## Recent history
 
 The current top ten active teams. Labels give the current rating. Steps show
 end-of-day ratings after completed matches; flat sections carry ratings forward.
+The full history is replayed at this publication's selected K.
 On narrow screens, scroll the charts sideways to see the complete view.
 
 ::: {.chart-scroll role="region" aria-label="Recent ratings chart" tabindex="0"}

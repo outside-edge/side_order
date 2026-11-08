@@ -22,6 +22,13 @@ read_publication <- function(directory) {
   ) {
     stop("Inconsistent publication cutoff")
   }
+  k <- manifest$analysis$specification$k
+  if (!is.list(k) || !setequal(names(k), unique(latest$format)) || !"k" %in% names(latest) ||
+        anyNA(latest$k) || any(latest$k != unlist(k[latest$format], use.names = FALSE))) {
+    stop("Inconsistent publication K values")
+  }
+  if (!is.null(manifest$analysis$specification$k_selection) &&
+        !all(c("k_selection.csv", "k_tuning.csv") %in% files)) stop("Missing K-selection evidence")
   list(manifest = manifest, latest = latest)
 }
 

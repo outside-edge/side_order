@@ -9,7 +9,7 @@ testthat::test_that("offline stages produce a coherent publication and reject ch
   cache_fixture(raw)
   cache_fixture(raw, "T20I")
   prepare_data(raw, prepared, as.Date("2025-12-31"), coverage = fixture_coverage)
-  analyze_data(prepared, analysis)
+  analyze_data(prepared, analysis, k = 100)
   visualize_data(analysis, figures)
   publish_data(prepared, analysis, figures, publication, require_fresh = FALSE)
   manifest <- jsonlite::read_json(file.path(publication, "manifest.json"))
@@ -47,7 +47,7 @@ testthat::test_that("offline stages produce a coherent publication and reject ch
     write_json(original, path)
   }
   testthat::expect_identical(sha256(file.path(publication, "latest.csv")), before)
-  analyze_data(prepared, analysis)
+  analyze_data(prepared, analysis, k = 100)
   testthat::expect_identical(sha256(file.path(analysis, "latest.csv")), before)
   testthat::expect_error(publish_data(prepared, analysis, figures, publication), "stale")
   writeLines("changed", file.path(analysis, "latest.csv"))

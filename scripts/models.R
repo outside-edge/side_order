@@ -1,15 +1,30 @@
 source("R/acquisition.R")
 source("R/elo.R")
+source("R/visualization.R")
 source("R/pipeline.R")
 for (module in list.files("R/models", pattern = "\\.R$", full.names = TRUE)) source(module)
 
 args <- commandArgs(trailingOnly = TRUE)
 if (!length(args)) {
-  stop("Usage: models.R prepare | current [format] [iterations] | compare [format] [origin] [until] [iterations]",
-    " | visualize <output-dir> | visualize-current [format] | publish-current [format]"
+  stop(
+    "Usage: models.R prepare | current [format] [iterations] | compare [format] [origin] [until] [iterations]",
+    " | visualize <output-dir> | visualize-current [format] | publish-current [format]",
+    " | tune-elo [format] | visualize-elo-tuning [format] | check-elo-tuning [format]"
   )
 }
-if (args[1] == "prepare") {
+if (args[1] %in% c("tune-elo", "visualize-elo-tuning", "check-elo-tuning")) {
+  if (length(args) > 2L) stop("Expected at most one format argument")
+  format <- if (length(args) == 2L) args[2] else NULL
+  if (args[1] == "tune-elo") {
+    run_elo_tuning(format)
+  } else if (args[1] == "visualize-elo-tuning") {
+    plot_elo_tuning(format)
+  } else {
+    if (is.null(format)) format <- c("Test", "ODI", "T20I")
+    if (any(!format %in% c("Test", "ODI", "T20I"))) stop("Unknown format")
+    for (name in format) check_elo_tuning(file.path("out/analysis/elo_tuning", tolower(name)))
+  }
+} else if (args[1] == "prepare") {
   prepare_model_context()
 } else if (args[1] == "current") {
   format <- if (length(args) >= 2L) args[2] else "Test"

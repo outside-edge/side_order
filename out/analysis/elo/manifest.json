@@ -7,7 +7,22 @@
     "implementation": "EloRating::e.single",
     "version": "0.46.18",
     "initial_rating": 1000,
-    "k": 100,
+    "k": {
+      "ODI": 27,
+      "T20I": 77,
+      "Test": 12
+    },
+    "k_selection": {
+      "method": "annual chronological expected-score MSE selection",
+      "origin": "2026-01-01",
+      "window_years": 5,
+      "minimum_matches": 100,
+      "k_grid": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 220, 240, 260, 280, 300, 320, 340, 360, 380, 400],
+      "objective": "match-weighted squared error of expected score; draws/ties = 0.5",
+      "prediction": "results completed strictly before match start date",
+      "tie_break": "smaller K",
+      "history": "full-history replay at the currently selected K; not historical live forecasts"
+    },
     "expectation": "normal CDF",
     "rounding": "nearest integer, ties to even",
     "ties": "0.5 each, including regulation ties resolved by a tiebreaker",
@@ -25,16 +40,19 @@
   "r_version": "4.6.0",
   "code_sha256": {
     "R/acquisition.R": "70a51080e845100a95fe9b96cdc70a5803a1f1ecc4b19872eafedd37a8abdf0e",
-    "R/elo.R": "3bca27c1c77aa1f83d4b61ab5ac6b9e4b82ece4b31547806a4fdb2abaacf325e",
+    "R/elo.R": "bb6a9d4cd716eb0f2215f06797f19f0af82851e86554fd7785cd53e4074c6a94",
+    "R/models/elo_tuning.R": "f13e1d14472784ba665411a4ca71f188ff29caee73b08028a0e18fdac0dc7784",
     "R/paths.R": "c267c8c657ffa7b4641f2d36e792d57fe50e95186ebb8ca1571e35855198cad1",
-    "R/pipeline.R": "dd1612e1e4617529e25ffdac6314c48a21de7b1ad33c56cdaf03a2851aed442e",
-    "R/visualization.R": "971a73ad37b497a8b2f413d20eccc1963512f2224f66185bb31a4aaed092bee4",
+    "R/pipeline.R": "314d55a31783bca728d419d050774b35713fb09729b3f6977981d21815070a5f",
+    "R/visualization.R": "27a70ea1efef560ec7f930e4a9f5a9681c25183ada10df67e0c3b267f909a011",
     "renv.lock": "8cdce78e86f45f2f97b0d254f2d773816d37179681544333fadbeed1c2ff222c",
-    "scripts/pipeline.R": "8875853301c18073af95add7841762f5491c0c6e80640f4b65527c51d02ba824"
+    "scripts/pipeline.R": "0ffb82ce50108112a9a7a03bad83190a93ed135036d4176264f120faad52b6c1"
   },
   "files": {
-    "latest.csv": "e6a99ad213d879ff03b869cba66a70cd1b8ee19994a106eead28911355a3e7d8",
-    "monthly.csv": "5ce366d66a5d35e8efa49a60fd9ef099d8f600bb7794ad5f60a761790b60f964",
-    "updates.csv": "c91a43e39b6b4bd3fbd5b0c313aedd5a42ead3d8d9fecab796f127654b51c996"
+    "k_selection.csv": "469c86ef03761c1a45ecde9628486f96688f1a074a1102c736f0aafa48b0472d",
+    "k_tuning.csv": "13f5b92b42fd5bd10d484035d7ca5ba058d789ce3ba914e0f7eccbd964b5cdb2",
+    "latest.csv": "a4e4b5f6f86d0c0141852413e227b84c51d84435c25ff970d036714746c26c99",
+    "monthly.csv": "27699912d60f2190d0bca43b10377659d7a1c67c71a92fe4e22c5de4b7656e89",
+    "updates.csv": "8c072c9f5a27e402ac01ca553f790d12cb7facfdbdc5846060f221021e61c943"
   }
 }

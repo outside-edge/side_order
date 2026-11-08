@@ -1,0 +1,59 @@
+{
+  "format": "ODI",
+  "as_of": "2026-10-25",
+  "specification": {
+    "k_grid": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 220, 240, 260, 280, 300, 320, 340, 360, 380, 400],
+    "first_evaluation_year": 2015,
+    "windows": [3, 5, 10],
+    "primary_window": 5,
+    "minimum_matches": 100,
+    "near_minimum_mse": 0.001,
+    "objective": "match-weighted squared error of expected score; draws/ties = 0.5",
+    "selection": "previous complete calendar years; smaller K breaks exact ties",
+    "prediction": "results completed strictly before match start date",
+    "interpretation": "retrospective nested chronological evaluation; not blinded confirmation"
+  },
+  "input_sha256": "93493cb0b02e7fa2d725780fcaff15b3948b0d2f20c70a0a91e059547e7ba733",
+  "baseline_specification": {
+    "model": "elo",
+    "implementation": "EloRating::e.single",
+    "version": "0.46.18",
+    "initial_rating": 1000,
+    "k": 100,
+    "k_selection": null,
+    "expectation": "normal CDF",
+    "rounding": "nearest integer, ties to even",
+    "ties": "0.5 each, including regulation ties resolved by a tiebreaker",
+    "no_result": "no update",
+    "order": "end_date, start_date, match_id",
+    "history": "calendar month end; carry forward; no interpolation",
+    "active_days": 730,
+    "provisional_matches": 10
+  },
+  "r_version": "4.6.0",
+  "publication_ledger_verified": true,
+  "code_sha256": {
+    "R/elo.R": "bb6a9d4cd716eb0f2215f06797f19f0af82851e86554fd7785cd53e4074c6a94",
+    "R/pipeline.R": "314d55a31783bca728d419d050774b35713fb09729b3f6977981d21815070a5f",
+    "R/models/common.R": "ecae1059ec2c48225747fc46613e0f5cf1b2ec699dcacf87c20b4e56dadd0993",
+    "R/models/elo_tuning.R": "f13e1d14472784ba665411a4ca71f188ff29caee73b08028a0e18fdac0dc7784",
+    "scripts/models.R": "939654fb4ef575b0bc857a67b496cea31653022ab1ea4e6d0fc390f1a53bda33",
+    "docs/pipeline.md": "73101e3726fe2338558c7cad5fa6bb4ea361737f69910833515c6bddaa21d13f",
+    "renv.lock": "8cdce78e86f45f2f97b0d254f2d773816d37179681544333fadbeed1c2ff222c",
+    "data/build/manifest.json": "c24cfdca5fa20067b93b64c30f01af30530658e95e910c223ad968cab16bfa9d"
+  },
+  "files": {
+    "candidate_predictions.csv.gz": "93bf99a6da41521384d9b0533043128ad6a5f00dc7eea4e8f9460945d356637d",
+    "coverage.csv": "daecb3e7ad02927833fde56dc68cb479b3613ccd3712f067f07dfbe758a80d7a",
+    "current_curve.csv": "46ebeb488b61aa9d68f4bc285544e0ac5c9725419664a25513ffee056994c6df",
+    "current_selection.csv": "0d0d46aa886108b24b1d538b3001eb9d302c5103a79f07ba04f197a98f251db5",
+    "evaluation.csv": "91dd53b84cacd3564aa1b0b3c0f237471bb0a4c0826587687bc7ac0c61d51d9c",
+    "folds.csv": "25e2ea0c6635deca325f2e5be497a3b1a25426ed2f886928d42e0222f114812a",
+    "ratings.csv": "42be5aa77f988c90627fcd160b32d31b82f3906d64c5301796b4e962e380a6da",
+    "report.md": "5a200aa7d5b56a28f5aeb68e141329c28b26ed6ed800a8b8fc6f157bcd20c5c0",
+    "stability.csv": "3307aa6293bccdfcfda4b8c2a07da093849c091c824cb46eafce76de07ffc710",
+    "summary.csv": "d65e9bbb72829086dc2e01cdc2e1053876d98e3f67b9ad6dc43e829412f3c6ab",
+    "tuning.csv": "a00b6cfb269f0c514615884c5ff837c1598de58f01ac7087ae3dad81ecb01185",
+    "year_curves.csv": "e1ea8b3c17e84ab7707b1d0c79778415a0d640b9a297844fb3452c93627e239a"
+  }
+}

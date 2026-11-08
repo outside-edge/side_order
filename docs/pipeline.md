@@ -88,10 +88,11 @@ the two sources.
 ## Elo specification
 
 The implementation calls the documented `EloRating::e.single()` update function,
-the same function used internally by `elo.seq()`. It keeps the original defaults:
-initial rating 1,000, K = 100, normal-CDF expectation, and integer rounding after
-every match. All 100 final team ratings in the recorded 2025 Test/T20I fixtures
-match an independent `elo.seq()` reference exactly.
+the same function used internally by `elo.seq()`. It uses an initial rating of
+1,000, normal-CDF expectation, and integer rounding after every match. K is
+selected separately for each format as described below. The fixed K=100
+baseline still matches all 100 final team ratings in the recorded 2025 Test/T20I
+fixtures against an independent `elo.seq()` reference.
 
 The normal-CDF probability is
 `Φ((rating1 − rating2) / (200 × √2))`. This is distinct from the logistic link in
@@ -132,6 +133,68 @@ each model's treatment of draws, ties, inactivity, and missing covariates.
 The [modeling proposal](rating_models.md) sets out institutional versus lineup
 strength, TrueSkill-style and GAM extensions, venue context, and the distinction
 between live ratings and retrospective smoothing.
+
+## Selecting K
+
+`make analyze` and the scheduled `make update` select K before producing ratings.
+For each format, the selection origin is January 1 of the publication year.
+Selection is recomputed from the saved source version; corrections to prior
+years can therefore change K within the publication year.
+Candidates are the integers 1–200 and 220–400 by 20. Each candidate replays all
+history completed before the origin, starting every team at 1,000. The selected
+K minimizes mean squared expected-score error on matches starting in the prior
+five complete calendar years and completed before the origin. Exact ties prefer
+the smaller K. Selection requires at least 100 matches and representation in
+every tuning year; insufficient data stop publication rather than silently
+substituting K=100. At K=1, integer rounding prevents learning from equal starts.
+
+Forecasts use ratings from results completed strictly before each match starts.
+Same-day results are unavailable because completion times are not recorded.
+A Test spanning New Year belongs to its starting year and cannot enter January
+selection until its result exists. Draws and ties score 0.5; no-results are excluded.
+Squared error targets the conditional mean score, not a three-category outcome
+probability. The model retains the full production team universe, including
+associates and historical invitational sides.
+
+After selection, the entire history is replayed at the selected K through the
+publication cutoff. These retrospective curves do not splice annual K values or
+represent historical live forecasts. All rating CSVs include K; `k_selection.csv`
+records the selection period and sample, and `k_tuning.csv` records every candidate
+loss. Both files are included in the publication and its checksum manifest.
+
+The separate evaluation workflow selects K at annual origins from 2015 onward
+and evaluates the following year's forecasts while updating ratings between
+matches. Five years is the primary tuning window, with three- and ten-year
+sensitivities. It compares against fixed K=100 and a constant expected score of
+0.5, using equal match weights and identical supported evaluation matches.
+The final evaluation year can be partial. Results previously inspected during
+development, including recent ODI outcomes, make this a retrospective assessment,
+not blinded confirmation. The current K is selected using only complete prior
+years regardless of what has been observed during development.
+
+```sh
+make tune-elo
+make check-elo-tuning
+make visualize-elo-tuning
+```
+
+These commands use the existing `scripts/models.R` runner and can be restricted
+with `ELO_FORMAT=ODI`. Analysis functions live in `R/models/elo_tuning.R`, plotting
+in `R/models/elo_tuning_plots.R`, and tests in `tests/testthat/test-elo-tuning.R`.
+Results live in `out/analysis/elo_tuning/<format>/`; figures in
+`figs/elo_tuning/<format>/`. Saved outputs include compressed candidate forecasts,
+annual tuning curves and evaluation predictions, match-weighted summaries,
+current selections, leave-one-year-out stability, and every candidate's ratings.
+The checker reconstructs scores and choices from saved forecasts and rejects
+missing or duplicated candidates and evaluation rows. Successful runs replace
+outputs atomically; failed diagnostics are retained in ignored `failed-*` folders.
+
+Candidates within 0.001 MSE of the current minimum are flagged as a descriptive
+sensitivity set, not a confidence interval. Annual results are dependent through
+series and teams; the reports show paired annual differences without pretending
+matches are independent. The historical gain was small for T20Is. Neither a
+precise grid minimum nor a retrospective gain establishes future superiority.
+Venue, lineup, margin and inactivity adjustments remain separate model changes.
 
 ## Publication and checks
 

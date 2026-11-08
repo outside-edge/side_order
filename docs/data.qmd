@@ -17,6 +17,8 @@ All downloads below belong to this publication.
 | [Current ratings](../out/release/elo/latest.csv) | Every rated team, with active/provisional flags, current rank, and last rated match |
 | [Monthly history](../out/release/elo/monthly.csv) | Calendar-month-end ratings for each format and team |
 | [Match updates](../out/release/elo/updates.csv) | Both teams' ratings before and after every rated match |
+| [Selected K values](../out/release/elo/k_selection.csv) | Per-format K, selection origin, tuning period, match counts and loss |
+| [K tuning curves](../out/release/elo/k_tuning.csv) | Every candidate K and its tuning loss for this publication |
 | [Publication metadata](../out/release/elo/manifest.json) | Model specification, source receipts, and file checksums |
 
 ## Coverage
@@ -41,6 +43,8 @@ is the set of matches listed there; it has not been independently certified as a
 Join by stable team and match IDs, and keep formats separate. A missing current
 rank indicates an inactive team. Month-end history excludes incomplete months;
 use the current-ratings file for the latest cutoff.
+The `k` column records the constant used to replay that format's history in
+this publication; it is also recorded in the metadata and selection downloads.
 
 The files are regenerated together after successful checks. Earlier publications
 remain available through the repository's

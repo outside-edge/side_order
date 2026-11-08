@@ -94,7 +94,10 @@ ratings_charts <- function(data, format_name, styles = chart_styles(data$latest)
     ggplot2::scale_y_continuous(expand = ggplot2::expansion(mult = 0.08)) +
     ggplot2::labs(
       title = paste(format_name, "Elo ratings"),
-      subtitle = paste("Recent history ·", format(start, "%Y"), "to", cutoff, "· labels show current ratings"),
+      subtitle = paste(
+        "Recent history ·", format(start, "%Y"), "to", cutoff,
+        "· K =", data$manifest$specification$k[[format_name]]
+      ),
       x = NULL, y = "Elo rating", caption = note
     ) +
     ratings_theme()
@@ -104,7 +107,10 @@ ratings_charts <- function(data, format_name, styles = chart_styles(data$latest)
     ggplot2::scale_x_date(date_labels = "%Y", expand = ggplot2::expansion(mult = c(0.01, 0.02))) +
     ggplot2::labs(
       title = paste(format_name, "Elo ratings · full history"),
-      subtitle = paste("Current top ten active teams, ordered by current rating · through", cutoff),
+      subtitle = paste(
+        "Current top ten active teams · through", cutoff,
+        "· K =", data$manifest$specification$k[[format_name]]
+      ),
       x = NULL, y = "Elo rating",
       caption = paste("All panels use the same axes. Headings give current ratings.", note, sep = "\n")
     ) +

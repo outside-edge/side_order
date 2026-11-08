@@ -1,4 +1,5 @@
 .PHONY: sync fetch prepare analyze visualize publish update site lint test check ci-docker model-data models check-models current-models visualize-models publish-models
+.PHONY: tune-elo visualize-elo-tuning check-elo-tuning
 
 QUARTO ?= quarto
 MODEL_FORMAT ?= Test
@@ -22,6 +23,15 @@ model-data:
 
 models:
 	Rscript scripts/models.R compare $(MODEL_ARGS)
+
+tune-elo:
+	Rscript scripts/models.R tune-elo $(ELO_FORMAT)
+
+visualize-elo-tuning:
+	Rscript scripts/models.R visualize-elo-tuning $(ELO_FORMAT)
+
+check-elo-tuning:
+	Rscript scripts/models.R check-elo-tuning $(ELO_FORMAT)
 
 current-models:
 	Rscript scripts/models.R current $(MODEL_ARGS)
