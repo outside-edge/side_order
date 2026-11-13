@@ -103,7 +103,7 @@ predictive performance.
 - Wins score 1 and losses 0. Draws and ties score 0.5 each. Matches recorded as
   tied are treated as ties even if a bowl-out or Super Over subsequently decided
   a winner.
-- Abandoned, cancelled, and no-result matches cause no rating update.
+- Abandoned, canceled, and no-result matches cause no rating update.
 - Each format has a separate pool. Results are ordered by completion date,
   start date, and match ID. The latter is a reproducible convention for same-day
   finishes, not a claim about their exact finish times.

@@ -39,7 +39,7 @@ Rendering reads the saved publication without fetching data or refitting models.
 ## Models
 
 Elo updates ratings after each completed match. Draws and ties count as half-results;
-abandoned, cancelled, and no-result matches cause no update. The published Elo
+abandoned, canceled, and no-result matches cause no update. The published Elo
 model selects K separately for each format using forecasts from the preceding
 five complete years. Each publication replays history with its selected K.
 It has no venue adjustment or uncertainty intervals.

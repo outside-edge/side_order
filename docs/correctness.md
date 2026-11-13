@@ -15,7 +15,7 @@ The original winner assignment treated every result that was not a team-1 win
 as a team-2 win, except outcomes containing “drawn”. Across the men's international
 subsets, this affected **415 matches**:
 
-| Format | No result / abandoned / cancelled | Tied | Total |
+| Format | No result / abandoned / canceled | Tied | Total |
 | --- | ---: | ---: | ---: |
 | Test | 12 | 2 | 14 |
 | ODI | 273 | 39 | 312 |
@@ -63,7 +63,7 @@ monthly extraction. Each of those choices is explicit in the manifest/README.
 
 The full Test history through October 24, 2026 contains 2,638 rated matches.
 Every update agrees exactly with `elo.seq()`. All 2,416 rated Tests shared with
-the legacy dataset agree on outcomes; its 12 abandoned/cancelled Tests are not
+the legacy dataset agree on outcomes; its 12 abandoned/canceled Tests are not
 listed in the annual results tables. The ODI overlap also exposes different
 identifier namespaces: for example, Africa XI is API ID 4058 in the legacy data
 and profile-link ID 213709 in the annual tables. An ID-only comparison across
