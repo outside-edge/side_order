@@ -24,7 +24,7 @@ knitr::kable(settings, format = "html", escape = TRUE)
 ```
 
 Draws and ties count as half-results. A regulation tie resolved by a tiebreaker
-is treated as a tie when the source records it that way. Abandoned, cancelled,
+is treated as a tie when the source records it that way. Abandoned, canceled,
 and no-result matches do not update either team's rating.
 
 The implementation is `r spec$implementation`, version `r spec$version`, from
